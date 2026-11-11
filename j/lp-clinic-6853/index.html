@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ルミエール美容クリニック 看護師採用（架空のクリニック）｜LP 自主制作の見本</title>
+<meta name="description" content="美容医療クリニックの看護師採用LPの自主制作見本です。クリニック名・スタッフの声はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#4a3b38;--muted:#8a7772;--pink:#e8929f;--pink-d:#c66477;--pink-l:#fdf0f1;--beige:#f7f1e8;--line:#ecdfd9;--bg:#fffaf7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px;white-space:nowrap;color:var(--pink-d)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--pink-d)}
+.btn{display:inline-block;white-space:nowrap;background:var(--pink-d);color:#fff;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px;border:0;cursor:pointer;font-size:15px}
+.btn.outline{background:#fff;color:var(--pink-d);border:1.5px solid var(--pink-d)}
+.hero{background:linear-gradient(135deg,var(--pink-l) 0%,var(--beige) 100%);border-radius:28px;padding:50px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-bottom:22px}
+.hero .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;color:var(--pink-d)}
+.hero h1{font-size:clamp(26px,4vw,44px);line-height:1.5;margin:16px 0;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1 mark{background:linear-gradient(transparent 62%,#f6c9ce 62%);color:inherit}
+.hero p{color:var(--muted);margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--pink-d);font-weight:700}
+section{padding:64px 0}
+.eyebrow{color:var(--pink-d);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(23px,3vw,32px);margin:6px 0 28px;line-height:1.5}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:44px;height:44px;margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.day{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.day div{background:var(--beige);border-radius:16px;padding:16px;border:1px solid var(--line)}
+.day time{font-weight:800;color:var(--pink-d);display:block;font-size:14px}
+.day p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.person{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff;display:flex;gap:16px}
+.person .face{width:58px;height:58px;flex-shrink:0}
+.person h3{margin:0 0 4px;font-size:16px}
+.person small{color:var(--pink-d);font-weight:700}
+.person p{font-size:14px;margin:10px 0 0;color:var(--muted)}
+table.req{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+table.req th,table.req td{border:1px solid var(--line);padding:14px;text-align:left;vertical-align:top}
+table.req th{background:var(--beige);width:9em;font-weight:700;color:var(--pink-d)}
+.tablebox{overflow-x:auto}
+.entry{background:#fff;border:1px solid var(--line);border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.entry p{color:var(--muted)}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--beige);color:var(--ink);font-size:15px;margin-bottom:6px}
+.err{color:#b23a4c;font-size:13px;min-height:1.3em;margin-bottom:8px}
+.ok{background:var(--pink-l);border:1px solid var(--pink);border-radius:12px;padding:14px;margin-top:8px;display:none}
+.ok.show{display:block}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.entry{grid-template-columns:1fr;padding:30px}
+  .cards{grid-template-columns:1fr}
+  .day{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr}
+  section{padding:48px 0}
+}
+@media (max-width:480px){.logo{font-size:14px;gap:6px}header.site .btn{padding:10px 16px;font-size:13px}.hero h1{font-size:clamp(21px,6.4vw,26px)}.day{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空のクリニック・架空のデータ。実在のクリニックの求人ではありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fdf0f1" stroke="#e8929f" stroke-width="1.5"/><path d="M10 18c2-6 10-6 12 0" stroke="#c66477" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="16" cy="12" r="2.6" fill="#c66477"/></svg>ルミエール美容クリニック（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#work">仕事内容</a></li><li><a href="#voice">先輩の声</a></li><li><a href="#req">募集要項</a></li></ul></nav>
+  <a class="btn" href="#entry">見学・応募する</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">美容医療クリニック 看護師募集（架空）</span>
+      <h1>未経験からでも、<br><mark>安心して</mark>始められる<wbr>美容医療の仕事。</h1>
+      <p>医療脱毛を中心とした美容クリニックで、お客様の肌と心に寄り添う看護師を募集します。研修期間は先輩が1件ずつ同行し、独り立ちまで丁寧にサポートします。</p>
+      <a class="btn" href="#entry">1分で見学予約</a>
+      <div class="chips"><span>未経験歓迎</span><span>研修制度あり</span><span>日曜休み相談可</span></div>
+    </div>
+    <svg viewBox="0 0 440 320" aria-hidden="true">
+      <circle cx="220" cy="160" r="140" fill="#fdf0f1"/>
+      <g transform="translate(110 70)">
+        <rect x="0" y="40" width="220" height="140" rx="20" fill="#ffffff" stroke="#e8929f" stroke-width="3"/>
+        <circle cx="60" cy="40" r="34" fill="#f7cdd2"/>
+        <path d="M34 36c6-14 46-14 52 0" stroke="#c66477" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <rect x="100" y="70" width="90" height="12" rx="6" fill="#f3dde0"/>
+        <rect x="100" y="94" width="70" height="12" rx="6" fill="#f3dde0"/>
+        <rect x="100" y="118" width="100" height="12" rx="6" fill="#f3dde0"/>
+        <circle cx="60" cy="150" r="10" fill="#e8929f"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="work">
+    <div class="eyebrow">WORK</div>
+    <h2>看護師の仕事内容</h2>
+    <div class="cards">
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdf0f1"/><path d="M14 22h16M22 14v16" stroke="#c66477" stroke-width="2.6" stroke-linecap="round"/></svg><h3>医療脱毛の施術</h3><p>レーザー機器を使った脱毛施術と、施術前後のお客様へのご説明を担当します。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdf0f1"/><path d="M14 28c2-8 14-8 16 0" stroke="#c66477" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="22" cy="16" r="4" fill="#c66477"/></svg><h3>カウンセリング</h3><p>お客様の不安やお悩みをお伺いし、無理のない施術プランをご提案します。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><rect x="10" y="10" width="24" height="24" rx="6" fill="#fdf0f1"/><path d="M15 22l5 5 9-11" stroke="#c66477" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>経過フォロー</h3><p>施術後の肌の状態確認や、次回来院までの不安解消のご連絡を行います。</p></div>
+    </div>
+  </section>
+
+  <section id="day" style="background:var(--beige);border-radius:28px">
+    <div class="wrap" style="padding:0 20px">
+    <div class="eyebrow">ONE DAY</div>
+    <h2>ある一日の流れ（例）</h2>
+    <div class="day">
+      <div><time>9:30</time><p>朝礼・器材の準備</p></div>
+      <div><time>10:00</time><p>カウンセリング対応</p></div>
+      <div><time>11:00</time><p>施術（午前3件）</p></div>
+      <div><time>14:00</time><p>施術（午後4件）</p></div>
+      <div><time>18:00</time><p>記録入力・翌日準備</p></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="voice">
+    <div class="eyebrow">VOICE</div>
+    <h2>先輩スタッフの声（架空）</h2>
+    <div class="people">
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fdf0f1"/><circle cx="29" cy="24" r="10" fill="#f0a9b2"/><path d="M14 46c3-12 27-12 30 0" fill="#f0a9b2"/></svg>
+        <div><h3>森田 さん（架空）</h3><small>入職1年目・病棟からの転職</small><p>最初は機器の操作に戸惑いましたが、先輩が毎回同行してくれたので3か月で独り立ちできました。</p></div>
+      </div>
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fdf0f1"/><circle cx="29" cy="24" r="10" fill="#e8929f"/><path d="M14 46c3-12 27-12 30 0" fill="#e8929f"/></svg>
+        <div><h3>浅井 さん（架空）</h3><small>入職3年目・育児中</small><p>日曜固定休と時短勤務の相談ができ、子育てと両立しながら働けています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="req">
+    <div class="eyebrow">REQUIREMENT</div>
+    <h2>募集要項（見本・架空の内容）</h2>
+    <div class="tablebox">
+    <table class="req">
+      <tr><th>職種</th><td>看護師（美容医療クリニック）</td></tr>
+      <tr><th>応募資格</th><td>看護師免許をお持ちの方（美容医療未経験可）</td></tr>
+      <tr><th>給与</th><td>月給28万円〜35万円（見本の架空の金額）</td></tr>
+      <tr><th>勤務時間</th><td>9:30〜18:30（シフト制）</td></tr>
+      <tr><th>休日</th><td>月8〜9日・シフト制（日曜休み相談可）</td></tr>
+      <tr><th>研修</th><td>入職後1〜3か月、先輩同行による施術研修</td></tr>
+      <tr><th>福利厚生</th><td>社会保険完備・社員割引・資格取得支援</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section id="entry">
+    <div class="entry">
+      <div>
+        <div class="eyebrow">ENTRY</div>
+        <h2 style="margin-top:6px">見学・応募フォーム（見本）</h2>
+        <p>実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">お名前</label>
+        <input id="name" name="name" type="text" placeholder="山田 花子">
+        <div class="err" id="errName"></div>
+        <label for="tel">電話番号</label>
+        <input id="tel" name="tel" type="tel" placeholder="090-0000-0000">
+        <div class="err" id="errTel"></div>
+        <label for="pref">ご希望の勤務形態</label>
+        <select id="pref" name="pref">
+          <option value="">選択してください</option>
+          <option>正社員</option>
+          <option>パート・時短</option>
+          <option>まずは見学のみ</option>
+        </select>
+        <div class="err" id="errPref"></div>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="okBox">送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。クリニック名・スタッフの声・数値はすべて架空であり、実在の医療機関・求人とは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var tel = document.getElementById('tel').value.trim();
+  var pref = document.getElementById('pref').value;
+  var errName = document.getElementById('errName');
+  var errTel = document.getElementById('errTel');
+  var errPref = document.getElementById('errPref');
+  errName.textContent = ''; errTel.textContent = ''; errPref.textContent = '';
+  if(!name){ errName.textContent = 'お名前を入力してください。'; ok = false; }
+  if(!tel || !/^[0-9\-]{10,13}$/.test(tel)){ errTel.textContent = '電話番号を正しい形式で入力してください。'; ok = false; }
+  if(!pref){ errPref.textContent = '勤務形態を選択してください。'; ok = false; }
+  var okBox = document.getElementById('okBox');
+  if(ok){ okBox.classList.add('show'); } else { okBox.classList.remove('show'); }
+});
+</script>
+</body>
+</html>
