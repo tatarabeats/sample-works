@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Web制作・自動化の見本（自主制作・架空のデータ）</title>
+<meta name="description" content="ランディングページ・Google Apps Script・データ収集ツールの自主制作見本の一覧です。店舗・会社・データはすべて架空です。">
+<link rel="stylesheet" href="assets/sample.css">
+<style>
+:root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--soft:#f8fafc;--accent:#0f766e}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.75 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+.wrap{width:min(1040px,100% - 32px);margin-inline:auto;padding:36px 0 60px}
+h1{font-size:clamp(24px,3.4vw,34px);margin:0 0 8px;line-height:1.35}
+.lead{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+a.card{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--soft);transition:transform .15s,box-shadow .15s}
+a.card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.08)}
+.kind{display:inline-block;font-size:12px;font-weight:800;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 10px}
+a.card h2{font-size:18px;margin:10px 0 6px}
+a.card p{margin:0;color:var(--muted);font-size:14px}
+.note{margin-top:30px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本の一覧です（架空の店舗・会社・データ。受託の実績ではありません）</div>
+<div class="wrap">
+  <h1>Web制作・自動化の見本</h1>
+  <p class="lead">ご依頼の前に、作る物の形と品質を見ていただくための自主制作の見本です。すべて PC とスマートフォンの幅で表示を確かめています。</p>
+  <div class="grid">
+    <a class="card" href="lp-restaurant/"><span class="kind">LP・飲食店</span><h2>炭火と土鍋ごはんの和食店</h2><p>こだわり3点・お品書き・お客様の声・店舗情報・予約導線。</p></a>
+    <a class="card" href="lp-fitness/"><span class="kind">LP・フィットネス</span><h2>完全個室のパーソナルジム</h2><p>選ばれる理由・体験の流れ・料金3プラン・よくある質問・入力確認つきの申込フォーム。</p></a>
+    <a class="card" href="lp-recruit/"><span class="kind">LP・採用</span><h2>ルート配送ドライバーの採用</h2><p>仕事の一日・先輩の声・募集要項の表・入力確認つきの応募フォーム。</p></a>
+    <a class="card" href="gas-form-report/"><span class="kind">自動化・Google Apps Script</span><h2>フォーム回答の整形・集計・通知</h2><p>表記の統一・要確認の理由付け・種別×月の集計・Gmail の下書き。ページの中で実際に動かせます。</p></a>
+    <a class="card" href="news-to-csv/"><span class="kind">データ収集・Python</span><h2>公開情報の一覧を CSV にするツール</h2><p>利用規約と robots.txt を確かめ、2秒間隔で20行を収集。納品前の確認つき。</p></a>
+  </div>
+  <p class="note">このサイトの店舗・会社・料金・お客様の声・社員の声は、見本のために作った架空の内容です。画像はすべてこのサイトのために描いた図形（SVG）で、写真・他社のロゴは使っていません。データ収集の見本だけは公開情報（出典はページに記載）を使っています。</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>パーソナルジム ミナモ（架空の店舗）｜LP 自主制作の見本</title>
+<meta name="description" content="フィットネスジムのランディングページの自主制作見本です。店舗・料金・体験談はすべて架空です。">
+<link rel="stylesheet" href="../assets/sample.css">
+<style>
+:root{--bg:#0f1720;--bg2:#16212d;--ink:#e8eef4;--muted:#9fb0c0;--lime:#c6f432;--teal:#2dd4bf;--line:#253446}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:14px}
+.logo{font-weight:900;font-size:22px;letter-spacing:.08em;text-decoration:none}
+.logo span{color:var(--lime)}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--lime)}
+.btn{display:inline-block;background:var(--lime);color:#0f1720;font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;border:0;cursor:pointer;font-size:15px}
+.btn:hover{filter:brightness(1.08)}
+.btn.line{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:36px 0 80px}
+.tag{display:inline-block;border:1px solid var(--lime);color:var(--lime);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(32px,5vw,60px);line-height:1.2;margin:0 0 18px;font-weight:900;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{color:var(--muted);font-size:17px;margin:0 0 28px}
+.stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.stats b{display:block;font-size:30px;color:var(--teal);line-height:1.2}
+.stats span{font-size:12px;color:var(--muted)}
+.hero-art{background:var(--bg2);border:1px solid var(--line);border-radius:28px;padding:16px}
+section{padding:76px 0;border-top:1px solid var(--line)}
+.kicker{color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(26px,3.2vw,38px);margin:6px 0 30px;line-height:1.35}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h3{margin:12px 0 6px;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.num{font-weight:900;color:var(--lime);font-size:14px}
+.flow{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.flow li{list-style:none;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:22px;position:relative}
+.flow li::before{counter-increment:s;content:"STEP " counter(s);display:block;color:var(--teal);font-weight:800;font-size:12px;margin-bottom:6px}
+.flow{padding:0;margin:0}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column}
+.plan.best{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime) inset}
+.plan .yen{font-size:34px;font-weight:900;margin:10px 0}
+.plan .yen small{font-size:14px;color:var(--muted);font-weight:400}
+.plan ul{padding-left:1.2em;color:var(--muted);font-size:14px;flex:1}
+.ribbon{display:inline-block;background:var(--lime);color:#0f1720;font-size:12px;font-weight:800;padding:3px 10px;border-radius:6px}
+.faq details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{color:var(--muted);margin:10px 0 0}
+.trial{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+form.box{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:26px}
+label{display:block;font-size:14px;margin:0 0 6px;font-weight:700}
+input,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b121a;color:var(--ink);font-size:15px;margin-bottom:16px}
+.err{color:#fca5a5;font-size:13px;min-height:1.2em;margin:-10px 0 10px}
+.done{background:#123a2a;border:1px solid var(--teal);border-radius:12px;padding:14px;margin-top:6px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center;border-top:1px solid var(--line)}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.trial{grid-template-columns:1fr}
+  .grid3,.price{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  section{padding:56px 0}
+}
+@media (max-width:520px){.flow{grid-template-columns:1fr}.stats{gap:18px}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の店舗・架空のデータ。実在のジムではありません）<a href="../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top">MINAMO<span>.</span></a>
+  <nav aria-label="ページ内"><ul><li><a href="#reason">選ばれる理由</a></li><li><a href="#flow">体験の流れ</a></li><li><a href="#price">料金</a></li><li><a href="#faq">よくある質問</a></li></ul></nav>
+  <a class="btn" href="#trial">無料体験</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="tag">完全個室のパーソナルジム（架空）</span>
+      <h1>週2回・50分で、<br><em>続けられる体</em>をつくる。</h1>
+      <p>食事を我慢しすぎない栄養の記録と、自宅でもできる10分の宿題。忙しい人が3か月続けられる仕組みを、専属トレーナーと一緒に組み立てます。</p>
+      <a class="btn" href="#trial">無料体験を申し込む</a> <a class="btn line" href="#price">料金を見る</a>
+      <div class="stats"><div><b>50分</b><span>1回のトレーニング</span></div><div><b>完全個室</b><span>他の人の目を気にしない</span></div><div><b>6:30〜23:00</b><span>出勤前・仕事帰りに</span></div></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 480 420">
+        <defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d2b3a"/><stop offset="1" stop-color="#0f1720"/></linearGradient></defs>
+        <rect width="480" height="420" rx="20" fill="url(#fg)"/>
+        <g stroke="#253446" stroke-width="1">
+          <path d="M40 360h400M40 300h400M40 240h400M40 180h400M40 120h400"/>
+        </g>
+        <polyline points="40,330 110,315 180,300 250,270 320,250 390,210 440,190" fill="none" stroke="#2dd4bf" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#c6f432"><circle cx="110" cy="315" r="7"/><circle cx="250" cy="270" r="7"/><circle cx="390" cy="210" r="7"/></g>
+        <text x="40" y="70" fill="#9fb0c0" font-size="15" font-family="system-ui">12週間の記録の画面（見本の架空データ）</text>
+        <text x="40" y="100" fill="#e8eef4" font-size="26" font-weight="800" font-family="system-ui">スクワット 40kg → 62kg</text>
+        <g transform="translate(300 300)"><rect x="0" y="22" width="120" height="14" rx="7" fill="#c6f432"/><rect x="-8" y="6" width="18" height="46" rx="6" fill="#e8eef4"/><rect x="110" y="6" width="18" height="46" rx="6" fill="#e8eef4"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <section id="reason">
+    <div class="kicker">REASON</div>
+    <h2>ミナモが選ばれる3つの理由</h2>
+    <div class="grid3">
+      <div class="card"><span class="num">01</span><h3>担当は最後まで同じトレーナー</h3><p>体の癖や目標を毎回説明し直す必要はありません。予約の変更もトレーナーと直接やり取りできます。</p></div>
+      <div class="card"><span class="num">02</span><h3>食事は「記録して相談」</h3><p>写真を送るだけで、週に1回まとめて助言します。外食や飲み会がある週の組み立て方も一緒に考えます。</p></div>
+      <div class="card"><span class="num">03</span><h3>手ぶらで通える</h3><p>ウェア・シューズ・タオルは無料で貸し出し。仕事の帰りに鞄ひとつで寄れます。</p></div>
+    </div>
+  </section>
+
+  <section id="flow">
+    <div class="kicker">FLOW</div>
+    <h2>無料体験の流れ（約60分）</h2>
+    <ol class="flow">
+      <li><b>カウンセリング</b><br><span style="color:var(--muted);font-size:14px">目標と生活のリズムを伺います（15分）</span></li>
+      <li><b>体の状態の確認</b><br><span style="color:var(--muted);font-size:14px">姿勢と関節の動きを見ます（10分）</span></li>
+      <li><b>体験トレーニング</b><br><span style="color:var(--muted);font-size:14px">実際のメニューを1つ（25分）</span></li>
+      <li><b>プランのご提案</b><br><span style="color:var(--muted);font-size:14px">勧誘はしません。持ち帰って検討できます</span></li>
+    </ol>
+  </section>
+
+  <section id="price">
+    <div class="kicker">PRICE</div>
+    <h2>料金（税込・見本の架空の金額）</h2>
+    <div class="price">
+      <div class="plan"><b>お試し 4回</b><div class="yen">29,800<small>円</small></div><ul><li>50分 × 4回</li><li>食事の記録の相談つき</li><li>1か月以内に利用</li></ul><a class="btn line" href="#trial">体験から始める</a></div>
+      <div class="plan best"><span class="ribbon">いちばん選ばれている</span><b>3か月 24回</b><div class="yen">158,400<small>円</small></div><ul><li>50分 × 週2回</li><li>食事の記録の相談つき</li><li>自宅用の10分メニュー</li></ul><a class="btn" href="#trial">体験から始める</a></div>
+      <div class="plan"><b>月4回 継続</b><div class="yen">36,300<small>円/月</small></div><ul><li>50分 × 月4回</li><li>3か月コースの後に</li><li>いつでも休会できます</li></ul><a class="btn line" href="#trial">体験から始める</a></div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="kicker">FAQ</div>
+    <h2>よくある質問</h2>
+    <details><summary>運動経験がまったく無くても大丈夫ですか？</summary><p>はい。最初の4回は、正しい姿勢と呼吸を覚えることを中心に組み立てます。</p></details>
+    <details><summary>予約の変更はいつまでできますか？</summary><p>前日の22時まで、トレーナーとのチャットで変更できます。</p></details>
+    <details><summary>体験の日に何を持っていけばよいですか？</summary><p>飲み物だけで大丈夫です。ウェアとシューズはお貸しします。</p></details>
+  </section>
+
+  <section id="trial">
+    <div class="kicker">TRIAL</div>
+    <h2>無料体験のお申し込み</h2>
+    <div class="trial">
+      <div><p style="color:var(--muted)">ご希望の日時と連絡先を入力してください。翌営業日までに担当トレーナーから日時の確定をご連絡します。</p><p class="sample-note">※見本のフォームです。入力した内容はどこにも送信されません（入力の確認だけを行います）。</p></div>
+      <form class="box" id="trialForm" novalidate>
+        <label for="nm">お名前</label><input id="nm" autocomplete="off" placeholder="例）見本 太郎"><div class="err" id="e-nm"></div>
+        <label for="ml">メールアドレス</label><input id="ml" type="email" autocomplete="off" placeholder="example@example.com"><div class="err" id="e-ml"></div>
+        <label for="dt">ご希望の時間帯</label>
+        <select id="dt"><option value="">選んでください</option><option>平日 6:30〜10:00</option><option>平日 18:00〜23:00</option><option>土日 10:00〜18:00</option></select><div class="err" id="e-dt"></div>
+        <button class="btn" type="submit" style="width:100%">この内容で申し込む</button>
+        <div id="done" class="done" hidden>入力を確認しました。見本のため送信はしていません。</div>
+      </form>
+    </div>
+  </section>
+</main>
+</div>
+<footer>© パーソナルジム ミナモ（架空の店舗）— このページは自主制作の見本です。店舗・料金・数値はすべて架空です。</footer>
+<script>
+document.getElementById('trialForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var ok=true,set=function(id,msg){document.getElementById('e-'+id).textContent=msg;if(msg)ok=false;};
+  set('nm',document.getElementById('nm').value.trim()?'':'お名前を入力してください');
+  set('ml',/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('ml').value.trim())?'':'メールアドレスの形を確かめてください');
+  set('dt',document.getElementById('dt').value?'':'時間帯を選んでください');
+  document.getElementById('done').hidden=!ok;
+});
+</script>
+</body>
+</html>

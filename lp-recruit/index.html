@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ハルカゼ配送 ドライバー採用（架空の会社）｜LP 自主制作の見本</title>
+<meta name="description" content="採用ランディングページの自主制作見本です。会社・給与・社員の声はすべて架空です。">
+<link rel="stylesheet" href="../assets/sample.css">
+<style>
+:root{--ink:#14213d;--muted:#5b6478;--blue:#1d4ed8;--blue-l:#e8efff;--sun:#ffb703;--bg:#ffffff;--soft:#f5f7fb;--line:#e3e8f0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1100px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:18px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;padding:13px 28px;border-radius:10px;border:0;cursor:pointer;font-size:15px}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.hero{background:linear-gradient(135deg,#eef3ff 0%,#fff7e0 100%);border-radius:28px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-bottom:20px}
+.hero .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;color:var(--blue)}
+.hero h1{font-size:clamp(28px,4.4vw,50px);line-height:1.3;margin:16px 0}
+.hero h1 mark{background:linear-gradient(transparent 62%,#ffd76a 62%);color:inherit}
+.hero p{color:var(--muted);margin:0 0 24px}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.points div{background:#fff;border-radius:14px;padding:12px;text-align:center;border:1px solid var(--line)}
+.points b{display:block;font-size:22px;color:var(--blue)}
+.points span{font-size:12px;color:var(--muted)}
+section{padding:70px 0}
+.eyebrow{color:var(--blue);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(24px,3vw,34px);margin:6px 0 28px;line-height:1.4}
+.day{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.day div{background:var(--soft);border-radius:16px;padding:18px;border:1px solid var(--line)}
+.day time{font-weight:800;color:var(--blue);display:block}
+.day p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.person{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
+.person .face{width:56px;height:56px}
+.person h3{margin:10px 0 4px;font-size:17px}
+.person small{color:var(--muted)}
+.person p{font-size:15px;margin:10px 0 0}
+table.req{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+table.req th,table.req td{border:1px solid var(--line);padding:14px;text-align:left;vertical-align:top}
+table.req th{background:var(--soft);width:9em;font-weight:700}
+.tablebox{overflow-x:auto}
+.entry{background:var(--ink);color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.entry p{color:#c9d2e3}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select{width:100%;padding:12px;border-radius:10px;border:1px solid #33415c;background:#0d1730;color:#fff;font-size:15px;margin-bottom:6px}
+.err{color:#fecaca;font-size:13px;min-height:1.3em;margin-bottom:8px}
+.ok{background:#16325c;border:1px solid #7aa2ff;border-radius:12px;padding:14px;margin-top:8px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.entry{grid-template-columns:1fr;padding:28px}
+  .day{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr}
+  section{padding:52px 0}
+}
+@media (max-width:480px){.day{grid-template-columns:1fr}.points{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の会社・架空のデータ。実在の会社の求人ではありません）<a href="../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#1d4ed8"/><path d="M8 20c5-9 13-9 18 0" stroke="#ffb703" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="17" cy="13" r="3" fill="#ffb703"/></svg>ハルカゼ配送（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#work">仕事の一日</a></li><li><a href="#people">先輩の声</a></li><li><a href="#req">募集要項</a></li></ul></nav>
+  <a class="btn sun" href="#entry">応募する</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">ルート配送ドライバー 正社員募集（架空）</span>
+      <h1>決まった道を、<br><mark>決まった時間に</mark>帰る仕事。</h1>
+      <p>地域の食品スーパー12店舗への定期配送です。毎日ほぼ同じルートで、夕方には家に帰れます。普通免許（AT限定可）で始められ、準中型免許の取得費用は会社が負担します。</p>
+      <a class="btn" href="#entry">1分で応募する</a>
+      <div class="points"><div><b>月給28万円〜</b><span>見本の架空の金額</span></div><div><b>17時台</b><span>平均の退勤時刻</span></div><div><b>年休110日</b><span>日曜＋シフト休</span></div></div>
+    </div>
+    <svg viewBox="0 0 460 340" aria-hidden="true">
+      <rect x="0" y="250" width="460" height="10" rx="5" fill="#cbd5e1"/>
+      <path d="M0 290h460" stroke="#94a3b8" stroke-width="4" stroke-dasharray="26 18"/>
+      <g transform="translate(70 120)">
+        <rect x="0" y="20" width="200" height="110" rx="12" fill="#ffffff" stroke="#1d4ed8" stroke-width="4"/>
+        <rect x="200" y="56" width="90" height="74" rx="12" fill="#1d4ed8"/>
+        <rect x="216" y="68" width="50" height="28" rx="6" fill="#dbe7ff"/>
+        <path d="M20 60c30-26 70-26 100 0" stroke="#ffb703" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <text x="24" y="104" font-size="18" font-weight="800" fill="#1d4ed8" font-family="system-ui">HARUKAZE</text>
+        <circle cx="50" cy="134" r="22" fill="#14213d"/><circle cx="50" cy="134" r="9" fill="#cbd5e1"/>
+        <circle cx="240" cy="134" r="22" fill="#14213d"/><circle cx="240" cy="134" r="9" fill="#cbd5e1"/>
+      </g>
+      <circle cx="390" cy="60" r="34" fill="#ffd76a"/>
+    </svg>
+  </div>
+
+  <section id="work">
+    <div class="eyebrow">ONE DAY</div>
+    <h2>ある一日の流れ（例）</h2>
+    <div class="day">
+      <div><time>8:00</time><p>出勤・車両の点検・アルコールの確認</p></div>
+      <div><time>8:30</time><p>センターで積み込み（台車で運べる重さ）</p></div>
+      <div><time>9:30</time><p>午前の配送 6店舗</p></div>
+      <div><time>13:30</time><p>休憩のあと午後の配送 6店舗</p></div>
+      <div><time>17:15</time><p>日報を入力して退勤</p></div>
+    </div>
+  </section>
+
+  <section id="people">
+    <div class="eyebrow">VOICE</div>
+    <h2>先輩の声（見本用の架空の文例）</h2>
+    <div class="people">
+      <div class="person"><svg class="face" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="#e8efff"/><circle cx="28" cy="22" r="10" fill="#1d4ed8"/><path d="M10 50c4-12 32-12 36 0" fill="#1d4ed8"/></svg><h3>Aさん（入社3年目）</h3><small>前職：飲食店のホール</small><p>ルートが決まっているので、2週間で一人で回れるようになりました。夕方に子どもを迎えに行けるのがうれしいです。</p></div>
+      <div class="person"><svg class="face" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="#fff4d6"/><circle cx="28" cy="22" r="10" fill="#d97706"/><path d="M10 50c4-12 32-12 36 0" fill="#d97706"/></svg><h3>Bさん（入社1年目）</h3><small>前職：工場のライン作業</small><p>準中型免許を会社の費用で取れました。最初の1か月は先輩が横に乗ってくれたので安心でした。</p></div>
+      <div class="person"><svg class="face" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="#e7f6ee"/><circle cx="28" cy="22" r="10" fill="#15803d"/><path d="M10 50c4-12 32-12 36 0" fill="#15803d"/></svg><h3>Cさん（入社6年目・班長）</h3><small>前職：長距離ドライバー</small><p>毎日家で寝られる生活に変わりました。新しく入った人の同乗も担当しています。</p></div>
+    </div>
+  </section>
+
+  <section id="req">
+    <div class="eyebrow">REQUIREMENTS</div>
+    <h2>募集要項</h2>
+    <div class="tablebox"><table class="req">
+      <tr><th>職種</th><td>ルート配送ドライバー（2t車）</td></tr>
+      <tr><th>雇用形態</th><td>正社員（試用期間3か月・条件は同じ）</td></tr>
+      <tr><th>給与</th><td>月給28万円〜34万円（見本の架空の金額）</td></tr>
+      <tr><th>勤務時間</th><td>8:00〜17:00（実働8時間・休憩60分）</td></tr>
+      <tr><th>休日</th><td>日曜・シフト休（月4〜5日）・年末年始</td></tr>
+      <tr><th>応募資格</th><td>普通自動車免許（AT限定可）</td></tr>
+      <tr><th>勤務地</th><td>〇〇県△△市（架空の所在地）</td></tr>
+    </table></div>
+  </section>
+
+  <section id="entry">
+    <div class="entry">
+      <div><h2 style="color:#fff">応募フォーム</h2><p>入力は1分で終わります。面接の日時は、応募の翌営業日までにお電話でご相談します。</p><p class="sample-note" style="color:#9fb0d0">※見本のフォームです。入力した内容はどこにも送信されません（入力の確認だけを行います）。</p></div>
+      <form id="entryForm" novalidate>
+        <label for="n">お名前</label><input id="n" autocomplete="off" placeholder="例）見本 花子"><div class="err" id="e-n"></div>
+        <label for="t">電話番号</label><input id="t" inputmode="tel" autocomplete="off" placeholder="例）000-0000-0000"><div class="err" id="e-t"></div>
+        <label for="l">免許の種類</label><select id="l"><option value="">選んでください</option><option>普通（AT限定）</option><option>普通（MT）</option><option>準中型以上</option></select><div class="err" id="e-l"></div>
+        <button class="btn sun" type="submit" style="width:100%">この内容で応募する</button>
+        <div class="ok" id="ok" hidden>入力を確認しました。見本のため送信はしていません。</div>
+      </form>
+    </div>
+  </section>
+</main>
+</div>
+<footer>© ハルカゼ配送（架空の会社）— このページは自主制作の見本です。会社名・給与・社員の声はすべて架空です。</footer>
+<script>
+document.getElementById('entryForm').addEventListener('submit',function(e){
+  e.preventDefault();var ok=true;
+  function v(id,msg){document.getElementById('e-'+id).textContent=msg;if(msg)ok=false;}
+  v('n',document.getElementById('n').value.trim()?'':'お名前を入力してください');
+  v('t',/^0\d{1,4}-?\d{1,4}-?\d{3,4}$/.test(document.getElementById('t').value.trim())?'':'電話番号の形を確かめてください（例 000-0000-0000）');
+  v('l',document.getElementById('l').value?'':'免許の種類を選んでください');
+  document.getElementById('ok').hidden=!ok;
+});
+</script>
+</body>
+</html>

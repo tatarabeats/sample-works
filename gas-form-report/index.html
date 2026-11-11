@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>フォーム回答の整形・集計・通知（GAS）｜自主制作の見本</title>
+<meta name="description" content="Google Apps Script でフォームの回答を整形・集計し、担当者への通知の下書きを作る自主制作見本です。データはすべて架空です。">
+<link rel="stylesheet" href="../assets/sample.css">
+<style>
+:root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--green:#188038;--green-l:#e6f4ea;--soft:#f8fafc;--warn:#b45309;--warn-l:#fef3c7}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.75 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+.wrap{width:min(1100px,100% - 32px);margin-inline:auto;padding:28px 0 60px}
+h1{font-size:clamp(24px,3.4vw,34px);line-height:1.35;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 22px}
+.flow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 28px}
+.flow span{background:var(--green-l);color:var(--green);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px}
+.flow i{color:var(--muted);font-style:normal}
+h2{font-size:20px;margin:36px 0 12px;padding-left:10px;border-left:4px solid var(--green)}
+textarea{width:100%;min-height:210px;font:13px/1.6 ui-monospace,Consolas,monospace;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--soft)}
+.btn{background:var(--green);color:#fff;border:0;border-radius:10px;padding:12px 22px;font-weight:800;font-size:15px;cursor:pointer;margin-top:10px}
+.btn.sub{background:#fff;color:var(--green);border:1px solid var(--green)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:18px}
+.tabs button{border:1px solid var(--line);background:var(--soft);border-radius:8px 8px 0 0;padding:8px 14px;cursor:pointer;font-size:14px}
+.tabs button[aria-selected=true]{background:#fff;border-bottom-color:#fff;font-weight:800;color:var(--green)}
+.panel{border:1px solid var(--line);border-radius:0 10px 10px 10px;padding:12px;margin-top:-1px;overflow-x:auto}
+table{border-collapse:collapse;font-size:13px;min-width:640px;width:100%}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;white-space:nowrap}
+th{background:#f1f5f9;position:sticky;top:0}
+tr.rv td{background:var(--warn-l)}
+td.num{text-align:right}
+pre.mail{white-space:pre-wrap;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px;font:13px/1.7 ui-monospace,Consolas,monospace;min-width:0}
+.meta{color:var(--muted);font-size:13px}
+ul.checks{columns:2;padding-left:1.2em;font-size:14px}
+ul.checks li.ng{color:#b91c1c}
+.code{max-height:360px;overflow:auto;background:#0f172a;color:#e2e8f0;border-radius:10px;padding:14px;font:12px/1.6 ui-monospace,Consolas,monospace;white-space:pre}
+@media (max-width:640px){ul.checks{columns:1}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空のデータ。実在の会社の業務ではありません）<a href="../">見本の一覧</a></div>
+<div class="wrap">
+  <h1>フォームの回答を整形・集計し、担当者への通知の下書きを作る（Google Apps Script）</h1>
+  <p class="lead">Google フォームの回答シートは、全角の電話番号・大文字のメール・同じ内容の再送が混ざります。このスクリプトは表記をそろえ、要確認の行に理由を付け、種別×月の件数表を作り、担当者あての Gmail の下書きを作ります（自動では送信しません）。</p>
+  <div class="flow"><span>フォームの回答 1</span><i>→</i><span>整形（表記をそろえる・要確認に理由）</span><i>→</i><span>集計（種別×月）</span><i>→</i><span>Gmail の下書き</span></div>
+
+  <h2>1. 動かしてみる（このページの中で、Apps Script と同じ関数を実行します）</h2>
+  <p class="meta">下の回答（架空の15件）を書き換えて「整形と集計を実行」を押すと、結果が表示されます。入力した内容はどこにも送信されません。</p>
+  <textarea id="src" spellcheck="false" aria-label="フォームの回答（CSV）"></textarea>
+  <button class="btn" id="run" type="button">整形と集計を実行</button>
+  <button class="btn sub" id="reset" type="button">見本のデータに戻す</button>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-p="p-clean">整形シート</button>
+    <button role="tab" aria-selected="false" data-p="p-sum">集計シート</button>
+    <button role="tab" aria-selected="false" data-p="p-mail">通知の下書き</button>
+  </div>
+  <div class="panel" id="p-clean"></div>
+  <div class="panel" id="p-sum" hidden></div>
+  <div class="panel" id="p-mail" hidden></div>
+
+  <h2>2. 試験の結果（Apps Script の模擬環境で Code.js を実行）</h2>
+  <p class="meta">SpreadsheetApp と GmailApp の代わりを用意して、実際の <code>runReport()</code> を Node で動かした結果です（<a href="test-gas.cjs">test-gas.cjs</a>・<a href="result.json">result.json</a>）。</p>
+  <ul class="checks" id="checks"><li>読み込み中…</li></ul>
+
+  <h2>3. スクリプト（Code.js）</h2>
+  <p class="meta">スプレッドシートの「拡張機能 → Apps Script」に貼り、トリガーで「フォーム送信時」に <code>runReport</code> を設定して使います。<a href="Code.js">Code.js をそのまま開く</a> / <a href="sample-responses.csv">見本の回答 CSV</a></p>
+  <div class="code" id="code">読み込み中…</div>
+</div>
+<script src="Code.js"></script>
+<script>
+(function(){
+  var srcEl=document.getElementById('src'),original='';
+  function parse(t){return t.trim().split(/\r?\n/).map(function(l){return l.split(',');});}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function table(head,rows,cls){
+    return '<table><thead><tr>'+head.map(function(h){return '<th>'+esc(h)+'</th>';}).join('')+'</tr></thead><tbody>'+
+      rows.map(function(r){return '<tr'+(cls?cls(r):'')+'>'+r.map(function(c){return '<td'+(typeof c==='number'?' class="num"':'')+'>'+esc(c)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table>';
+  }
+  function run(){
+    var rows=parse(srcEl.value).slice(1),r=frBuild(rows);
+    var why={};r.review.forEach(function(x){why[x.line]=x.problems.join('、');});
+    var withWhy=r.clean.map(function(row,i){return row.concat([why[i+2]||'']);});
+    document.getElementById('p-clean').innerHTML=table(FR_CONFIG.headers.concat(['要確認の理由']),withWhy,function(row){return row[7]==='要確認'?' class="rv"':'';});
+    document.getElementById('p-sum').innerHTML=table(r.summary[0],r.summary.slice(1))+'<p class="meta">要確認の行は集計に入れていません。</p>';
+    document.getElementById('p-mail').innerHTML=r.notice?'<p class="meta">宛先: '+esc(FR_CONFIG.notifyTo)+'（架空） / 件名: '+esc(r.notice.subject)+'</p><pre class="mail">'+esc(r.notice.body)+'</pre>':'<p>未対応・要確認が無いので、下書きは作りません。</p>';
+  }
+  document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.dataset.p).hidden=x!==b;});
+  });});
+  document.getElementById('run').addEventListener('click',run);
+  document.getElementById('reset').addEventListener('click',function(){srcEl.value=original;run();});
+  fetch('sample-responses.csv').then(function(r){return r.text();}).then(function(t){original=t;srcEl.value=t;run();});
+  fetch('Code.js').then(function(r){return r.text();}).then(function(t){document.getElementById('code').textContent=t;});
+  fetch('result.json').then(function(r){return r.json();}).then(function(d){
+    var ok=d.checks.filter(function(c){return c[1];}).length;
+    document.getElementById('checks').innerHTML=d.checks.map(function(c){return '<li class="'+(c[1]?'':'ng')+'">'+(c[1]?'合格：':'不合格：')+esc(c[0])+'</li>';}).join('')+'<li><b>合格 '+ok+' / '+d.checks.length+'</b></li>';
+  });
+})();
+</script>
+</body>
+</html>

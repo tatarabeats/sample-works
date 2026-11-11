@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>炭火と土鍋ごはん ともしび（架空の店舗）｜LP 自主制作の見本</title>
+<meta name="description" content="飲食店のランディングページの自主制作見本です。店舗・メニュー・価格はすべて架空です。">
+<link rel="stylesheet" href="../assets/sample.css">
+<style>
+:root{--ink:#2b211b;--paper:#faf6ef;--accent:#b4532a;--accent-d:#8a3c1c;--muted:#7a6a5d;--line:#e6dccd;--card:#fffdf9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 "Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif}
+.sans{font-family:system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.wrap{width:min(1100px,100% - 40px);margin-inline:auto}
+header.site{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.logo{font-size:22px;font-weight:700;letter-spacing:.12em;text-decoration:none}
+.logo small{display:block;font-size:11px;letter-spacing:.2em;color:var(--muted);font-weight:400}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 26px;border-radius:999px;font:700 15px/1.4 system-ui,-apple-system,"Hiragino Sans","Meiryo",sans-serif;border:0;cursor:pointer}
+.btn:hover{background:var(--accent-d)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:40px 0 70px}
+.hero h1{font-size:clamp(30px,4.4vw,52px);line-height:1.35;margin:0 0 18px;letter-spacing:.06em}
+.hero p.lead{font-size:17px;color:var(--muted);margin:0 0 28px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(60,30,10,.18)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.badge{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 14px;font-size:13px}
+section{padding:70px 0;border-top:1px solid var(--line)}
+.eyebrow{font:700 12px/1 system-ui,-apple-system,sans-serif;letter-spacing:.3em;color:var(--accent);margin-bottom:10px}
+h2{font-size:clamp(24px,3vw,34px);margin:0 0 28px;letter-spacing:.06em}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.feature h3{margin:14px 0 8px;font-size:19px}
+.feature p{margin:0;color:var(--muted);font-size:15px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
+.menu-item{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px dashed var(--line);padding:12px 0}
+.menu-item b{font-size:17px}
+.menu-item span{font-size:13px;color:var(--muted);display:block}
+.menu-item .price{font-family:system-ui,sans-serif;font-weight:700;white-space:nowrap}
+.course{margin-top:34px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.course div{background:#2b211b;color:#f6efe4;border-radius:18px;padding:26px}
+.course h3{margin:0 0 6px}
+.course .price{font:700 24px/1.3 system-ui,sans-serif;color:#f3c39b}
+.voice{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.voice blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;font-size:15px}
+.voice cite{display:block;margin-top:10px;font-size:12px;color:var(--muted);font-style:normal}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+table.shop{width:100%;border-collapse:collapse;font-size:15px}
+table.shop th,table.shop td{border-bottom:1px solid var(--line);padding:12px 8px;text-align:left;vertical-align:top}
+table.shop th{width:7.5em;color:var(--muted);font-weight:400}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.cta{background:var(--accent);color:#fff;text-align:center;border-radius:24px;padding:48px 24px;margin:0 0 70px}
+.cta h2{margin-bottom:10px}
+.cta .btn{background:#fff;color:var(--accent-d)}
+footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
+@media (max-width:860px){
+  nav ul{display:none}
+  .hero{grid-template-columns:1fr;padding-top:10px;gap:28px}
+  .features,.voice{grid-template-columns:1fr}
+  .menu,.course,.info{grid-template-columns:1fr}
+  section{padding:52px 0}
+}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の店舗・架空のデータ。実在の店舗ではありません）<a href="../">見本の一覧</a></div>
+<div class="wrap">
+  <header class="site">
+    <a class="logo" href="#top">ともしび<small>炭火と土鍋ごはん</small></a>
+    <nav class="sans" aria-label="ページ内">
+      <ul><li><a href="#feature">こだわり</a></li><li><a href="#menu">お品書き</a></li><li><a href="#voice">お客様の声</a></li><li><a href="#access">店舗情報</a></li></ul>
+    </nav>
+    <a class="btn" href="#reserve">席を予約する</a>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>炭の香りと、<br>炊きたての土鍋ごはん。</h1>
+        <p class="lead">一組ずつ土鍋で炊くごはんと、備長炭で焼く旬の魚と野菜。仕事帰りに一人でも、家族の記念日にも寄れる、駅から3分の小さな和食店です。</p>
+        <div class="actions"><a class="btn" href="#reserve">席を予約する</a><a class="btn ghost" href="#menu">お品書きを見る</a></div>
+        <div class="badges sans"><span class="badge">カウンター8席・個室1室</span><span class="badge">17:00〜23:00</span><span class="badge">お一人様歓迎</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 560 440" role="img">
+          <defs>
+            <radialGradient id="g1" cx="50%" cy="60%" r="70%"><stop offset="0" stop-color="#5b3a26"/><stop offset="1" stop-color="#1e140e"/></radialGradient>
+            <radialGradient id="ember" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb26b"/><stop offset=".6" stop-color="#e2582a"/><stop offset="1" stop-color="#7a2410" stop-opacity="0"/></radialGradient>
+            <linearGradient id="pot" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3d3532"/><stop offset="1" stop-color="#181412"/></linearGradient>
+          </defs>
+          <rect width="560" height="440" fill="url(#g1)"/>
+          <ellipse cx="280" cy="380" rx="230" ry="40" fill="url(#ember)" opacity=".85"/>
+          <g opacity=".55" fill="none" stroke="#f6efe4" stroke-width="3" stroke-linecap="round">
+            <path d="M230 120c-14-22 14-34 0-58"/><path d="M280 110c-14-22 14-34 0-58"/><path d="M330 120c-14-22 14-34 0-58"/>
+          </g>
+          <ellipse cx="280" cy="170" rx="128" ry="22" fill="#2a2321"/>
+          <path d="M150 175c0 90 40 150 130 150s130-60 130-150z" fill="url(#pot)"/>
+          <ellipse cx="280" cy="175" rx="130" ry="26" fill="#4a403c"/>
+          <ellipse cx="280" cy="178" rx="112" ry="19" fill="#f4efe6"/>
+          <g fill="#ffffff" opacity=".9">
+            <ellipse cx="250" cy="176" rx="6" ry="3"/><ellipse cx="270" cy="172" rx="6" ry="3"/><ellipse cx="292" cy="179" rx="6" ry="3"/><ellipse cx="312" cy="173" rx="6" ry="3"/><ellipse cx="236" cy="182" rx="6" ry="3"/><ellipse cx="330" cy="181" rx="6" ry="3"/>
+          </g>
+          <rect x="120" y="225" width="22" height="70" rx="8" fill="#2a2321"/><rect x="418" y="225" width="22" height="70" rx="8" fill="#2a2321"/>
+          <g fill="#e2582a"><circle cx="190" cy="372" r="10"/><circle cx="240" cy="380" r="8"/><circle cx="300" cy="376" r="11"/><circle cx="350" cy="382" r="8"/><circle cx="390" cy="372" r="9"/></g>
+        </svg>
+      </div>
+    </div>
+
+    <section id="feature">
+      <div class="eyebrow">FEATURE</div>
+      <h2>ともしびの三つのこだわり</h2>
+      <div class="features">
+        <div class="feature">
+          <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#f3dcc9"/><path d="M12 24c0 6 4 10 10 10s10-4 10-10z" fill="#b4532a"/><ellipse cx="22" cy="24" rx="10" ry="3" fill="#7a2f14"/></svg>
+          <h3>一組ずつ炊く土鍋ごはん</h3>
+          <p>ご注文を受けてから20分で炊き上げます。おこげまで味わえるよう、最後に火を強めて仕上げます。</p>
+        </div>
+        <div class="feature">
+          <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#f3dcc9"/><path d="M10 26h24M13 30h18" stroke="#2b211b" stroke-width="3" stroke-linecap="round"/><path d="M16 22c0-5 6-5 6-10 3 4 6 6 6 10" fill="#e2582a"/></svg>
+          <h3>備長炭の焼き台</h3>
+          <p>魚は皮目から強火で、野菜は遠火でじっくり。素材ごとに焼き台の場所を変えています。</p>
+        </div>
+        <div class="feature">
+          <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#f3dcc9"/><rect x="12" y="14" width="20" height="16" rx="3" fill="none" stroke="#2b211b" stroke-width="3"/><path d="M17 20h10M17 25h6" stroke="#b4532a" stroke-width="3" stroke-linecap="round"/></svg>
+          <h3>その日の仕入れで変わる献立</h3>
+          <p>黒板のお品書きは毎日手書き。苦手な食材は予約時にお知らせいただければ差し替えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="eyebrow">MENU</div>
+      <h2>お品書き（一例）</h2>
+      <div class="menu">
+        <div class="menu-item"><div><b>土鍋ごはん 白米</b><span>2〜3名様分・炊き上がり20分</span></div><div class="price">1,100円</div></div>
+        <div class="menu-item"><div><b>土鍋ごはん 季節の炊き込み</b><span>秋は きのこと鶏</span></div><div class="price">1,650円</div></div>
+        <div class="menu-item"><div><b>本日の焼き魚</b><span>仕入れにより変わります</span></div><div class="price">1,280円〜</div></div>
+        <div class="menu-item"><div><b>炭火焼き野菜の盛り合わせ</b><span>5〜6種</span></div><div class="price">880円</div></div>
+        <div class="menu-item"><div><b>だし巻き玉子</b><span>注文ごとに巻きます</span></div><div class="price">660円</div></div>
+        <div class="menu-item"><div><b>香の物三種</b><span>自家製の浅漬け</span></div><div class="price">440円</div></div>
+      </div>
+      <div class="course">
+        <div><h3>ともしびの夜のコース</h3><p>前菜三種・お造り・焼き物・土鍋ごはん・甘味の全7品</p><div class="price">4,800円（税込）</div></div>
+        <div><h3>記念日のコース</h3><p>夜のコースに、のどぐろの炭火焼きと名入れの甘味を添えて</p><div class="price">7,200円（税込）</div></div>
+      </div>
+      <p class="sample-note sans">※料理名・価格は見本のための架空の内容です。</p>
+    </section>
+
+    <section id="voice">
+      <div class="eyebrow">VOICE</div>
+      <h2>お客様の声（見本用の架空の文例）</h2>
+      <div class="voice">
+        <blockquote>土鍋のふたを開けた瞬間の湯気で、家族全員が笑顔になりました。おこげを取り合ったのは久しぶりです。<cite>40代・ご家族で来店（架空の文例）</cite></blockquote>
+        <blockquote>カウンターで一人でも気兼ねなく過ごせました。焼き魚の皮がぱりっとしていて、また来ます。<cite>30代・お一人で来店（架空の文例）</cite></blockquote>
+        <blockquote>苦手な食材を予約の時に伝えたら、全部差し替えてくれました。気配りがうれしいお店です。<cite>50代・ご夫婦で来店（架空の文例）</cite></blockquote>
+      </div>
+    </section>
+
+    <section id="access">
+      <div class="eyebrow">ACCESS</div>
+      <h2>店舗情報</h2>
+      <div class="info">
+        <table class="shop sans">
+          <tr><th>店名</th><td>炭火と土鍋ごはん ともしび（架空）</td></tr>
+          <tr><th>所在地</th><td>東京都〇〇区△△ 1-2-3（架空の住所）</td></tr>
+          <tr><th>アクセス</th><td>〇〇駅 東口から徒歩3分</td></tr>
+          <tr><th>営業時間</th><td>17:00〜23:00（料理の最終注文 22:00）</td></tr>
+          <tr><th>定休日</th><td>月曜日</td></tr>
+          <tr><th>席数</th><td>カウンター8席・個室1室（4名まで）</td></tr>
+        </table>
+        <div class="map" aria-label="地図（見本のイラスト）">
+          <svg viewBox="0 0 480 300"><rect width="480" height="300" fill="#efe6d8"/><path d="M0 200h480M0 90h480M140 0v300M330 0v300" stroke="#fffaf2" stroke-width="22"/><path d="M0 200h480M0 90h480M140 0v300M330 0v300" stroke="#d9cbb6" stroke-width="2" stroke-dasharray="6 8"/><rect x="40" y="215" width="80" height="60" rx="6" fill="#cfd8c4"/><text x="80" y="250" font-size="14" text-anchor="middle" fill="#4b5a3d" font-family="system-ui">〇〇駅</text><circle cx="235" cy="145" r="16" fill="#b4532a"/><path d="M235 170l-10-14h20z" fill="#b4532a"/><text x="235" y="150" font-size="13" text-anchor="middle" fill="#fff" font-family="system-ui">灯</text><text x="300" y="60" font-size="12" fill="#7a6a5d" font-family="system-ui">地図は見本用のイラスト</text></svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta" id="reserve">
+      <h2>ご予約・お問い合わせ</h2>
+      <p class="sans">お電話（000-0000-0000・架空）またはウェブ予約で承ります。<br>見本のため、ボタンを押しても予約はされません。</p>
+      <button class="btn" type="button" onclick="this.textContent='見本のため予約はされません'">ウェブで予約する</button>
+    </div>
+  </main>
+</div>
+<footer class="sans">© 炭火と土鍋ごはん ともしび（架空の店舗）— このページは自主制作の見本です。店舗・メニュー・価格・お客様の声はすべて架空です。</footer>
+</body>
+</html>

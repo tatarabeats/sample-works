@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>公開情報の一覧を CSV にするツール｜自主制作の見本</title>
+<meta name="description" content="公開されている新着情報の一覧を、利用規約と robots.txt を確かめたうえで CSV にする自主制作見本です。">
+<link rel="stylesheet" href="../assets/sample.css">
+<style>
+:root{--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--blue:#2563eb;--soft:#f8fafc;--ok:#15803d}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.75 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+.wrap{width:min(1100px,100% - 32px);margin-inline:auto;padding:28px 0 60px}
+h1{font-size:clamp(24px,3.4vw,34px);line-height:1.35;margin:0 0 10px}
+.lead{color:var(--muted)}
+h2{font-size:20px;margin:34px 0 12px;padding-left:10px;border-left:4px solid var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--soft)}
+.box b{display:block;margin-bottom:4px}
+.box p{margin:0;font-size:14px;color:var(--muted)}
+.ok{color:var(--ok);font-weight:800}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:13px}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9;white-space:nowrap}
+td.d{white-space:nowrap}
+td a{color:var(--blue);word-break:break-all}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;border-radius:10px;padding:10px 18px;font-weight:800;margin:4px 8px 4px 0}
+.btn.sub{background:#fff;color:var(--blue);border:1px solid var(--blue)}
+ul.checks{padding-left:1.2em}
+.src{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:18px;padding-top:12px}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:14px;font:12px/1.6 ui-monospace,Consolas,monospace;overflow-x:auto}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（受託の成果物ではありません。集めたのは公開されている一覧の項目だけです）<a href="../">見本の一覧</a></div>
+<div class="wrap">
+  <h1>公開されている「お知らせ」一覧を集めて CSV にするツール</h1>
+  <p class="lead">官公庁・業界団体・競合のサイトの新着情報を毎週まとめたい、という依頼を想定した見本です。対象のサイトの利用規約と robots.txt を先に確かめ、許可されている範囲を間隔をあけて読み、Excel でそのまま開ける CSV にします。</p>
+
+  <h2>1. 集める前に確かめたこと</h2>
+  <div class="grid">
+    <div class="box"><b>利用規約 <span class="ok">利用可</span></b><p>対象: デジタル庁ウェブサイト。公共データ利用規約（第1.0版）で、出典を書けば複製・加工・商用利用ができる。<a href="https://www.digital.go.jp/copyright-policy">規約のページ</a></p></div>
+    <div class="box"><b>robots.txt <span class="ok">許可</span></b><p>/news は Disallow に含まれない。Crawl-delay: 1 なので、このツールは1回ごとに2秒あける。ツールの中でも毎回 robots.txt を読んで確かめる。</p></div>
+    <div class="box"><b>集める項目</b><p>一覧に出ている「掲載日・区分・件名・リンク先」だけ。個人の連絡先などは集めない。ログイン・会員限定のページは対象にしない。</p></div>
+  </div>
+
+  <h2>2. 集めた結果（20行）</h2>
+  <p><a class="btn" href="news.csv">news.csv を開く</a><a class="btn sub" href="collect_news.py">collect_news.py</a><a class="btn sub" href="fetch-log.json">取得の記録</a></p>
+  <div class="tablebox"><table><thead><tr><th>No</th><th>掲載日</th><th>区分</th><th>件名</th><th>URL</th><th>取得日時</th></tr></thead><tbody id="rows"><tr><td colspan="6">読み込み中…</td></tr></tbody></table></div>
+  <h2>3. 納品前の確認（このページを開くたびに CSV を読み直して確かめます）</h2>
+  <ul class="checks" id="checks"><li>読み込み中…</li></ul>
+
+  <h2>4. 使い方</h2>
+  <pre>python collect_news.py            # news.csv（20件）と fetch-log.json を作る
+python collect_news.py --limit 40 # 40件まで集める
+# 必要な物は Python 3.9 以上だけ（標準ライブラリのみ）</pre>
+  <p class="src">出典：デジタル庁ウェブサイト「お知らせ」（https://www.digital.go.jp/news）を加工して作成（公共データ利用規約 第1.0版）。この一覧は見本の作成者が集めて並べたもので、デジタル庁が作成したものではありません。最新の内容は元のページをご覧ください。</p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function parseCsv(t){
+    t=t.replace(/^﻿/,'');var rows=[],row=[],cur='',q=false;
+    for(var i=0;i<t.length;i++){var c=t[i];
+      if(q){if(c==='"'){if(t[i+1]==='"'){cur+='"';i++;}else q=false;}else cur+=c;}
+      else if(c==='"')q=true;else if(c===','){row.push(cur);cur='';}
+      else if(c==='\n'){row.push(cur.replace(/\r$/,''));rows.push(row);row=[];cur='';}else cur+=c;}
+    if(cur||row.length){row.push(cur);rows.push(row);}
+    return rows;
+  }
+  fetch('news.csv').then(function(r){return r.text();}).then(function(t){
+    var all=parseCsv(t),head=all[0],rows=all.slice(1).filter(function(r){return r.length>1;});
+    document.getElementById('rows').innerHTML=rows.map(function(r){
+      return '<tr><td>'+esc(r[0])+'</td><td class="d">'+esc(r[1])+'</td><td class="d">'+esc(r[2])+'</td><td>'+esc(r[3])+'</td><td><a href="'+esc(r[4])+'" rel="noopener">'+esc(r[4])+'</a></td><td class="d">'+esc(r[5])+'</td></tr>';
+    }).join('');
+    var keys={},dup=0;rows.forEach(function(r){var k=r[1]+'|'+r[3]+'|'+r[4];if(keys[k])dup++;keys[k]=1;});
+    var checks=[
+      ['見出しが「No・掲載日・区分・件名・URL・取得日時」の6列',head.join(',')==='No,掲載日,区分,件名,URL,取得日時'],
+      ['行数が20行',rows.length===20],
+      ['全行の6列が埋まっている',rows.every(function(r){return r.length===6&&r.every(function(c){return String(c).trim();});})],
+      ['掲載日がすべて YYYY-MM-DD の形',rows.every(function(r){return /^\d{4}-\d{2}-\d{2}$/.test(r[1]);})],
+      ['掲載日が新しい順に並んでいる',rows.every(function(r,i){return i===0||rows[i-1][1]>=r[1];})],
+      ['URL がすべて対象サイト（https://www.digital.go.jp/）',rows.every(function(r){return r[4].indexOf('https://www.digital.go.jp/')===0;})],
+      ['同じお知らせの重複が0件',dup===0]
+    ];
+    document.getElementById('checks').innerHTML=checks.map(function(c){return '<li>'+(c[1]?'<b style="color:#15803d">合格</b>：':'<b style="color:#b91c1c">不合格</b>：')+esc(c[0])+'</li>';}).join('');
+  });
+})();
+</script>
+</body>
+</html>

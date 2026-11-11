@@ -1,0 +1,4 @@
+/* 全ページ共通: 「自主制作の見本」の帯（架空の店舗・架空のデータ） */
+.sample-ribbon{position:sticky;top:0;z-index:100;background:#1f2937;color:#f9fafb;font:600 13px/1.5 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;text-align:center;padding:6px 12px;letter-spacing:.02em}
+.sample-ribbon a{color:#fde68a;margin-left:.75em;text-decoration:underline}
+.sample-note{font-size:12px;color:#6b7280;margin-top:8px}
