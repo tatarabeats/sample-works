@@ -53,8 +53,7 @@ table.req th{background:var(--beige);width:9em;font-weight:700;color:var(--pink-
 form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
 form input,form select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--beige);color:var(--ink);font-size:15px;margin-bottom:6px}
 .err{color:#b23a4c;font-size:13px;min-height:1.3em;margin-bottom:8px}
-.ok{background:var(--pink-l);border:1px solid var(--pink);border-radius:12px;padding:14px;margin-top:8px;display:none}
-.ok.show{display:block}
+.ok{background:var(--pink-l);border:1px solid var(--pink);border-radius:12px;padding:14px;margin-top:8px}
 footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
 @media (max-width:900px){
   nav ul{display:none}
@@ -164,8 +163,8 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
         <label for="name">お名前</label>
         <input id="name" name="name" type="text" placeholder="山田 花子">
         <div class="err" id="errName"></div>
-        <label for="tel">電話番号</label>
-        <input id="tel" name="tel" type="tel" placeholder="090-0000-0000">
+        <label for="t">電話番号</label>
+        <input id="t" name="tel" inputmode="tel" autocomplete="off" placeholder="090-0000-0000">
         <div class="err" id="errTel"></div>
         <label for="pref">ご希望の勤務形態</label>
         <select id="pref" name="pref">
@@ -176,7 +175,7 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
         </select>
         <div class="err" id="errPref"></div>
         <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
-        <div class="ok" id="okBox">送信内容を確認しました（見本のため実際には送信されません）。</div>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
       </form>
     </div>
   </section>
@@ -188,7 +187,7 @@ document.getElementById('entryForm').addEventListener('submit', function(e){
   e.preventDefault();
   var ok = true;
   var name = document.getElementById('name').value.trim();
-  var tel = document.getElementById('tel').value.trim();
+  var tel = document.getElementById('t').value.trim();
   var pref = document.getElementById('pref').value;
   var errName = document.getElementById('errName');
   var errTel = document.getElementById('errTel');
@@ -197,8 +196,7 @@ document.getElementById('entryForm').addEventListener('submit', function(e){
   if(!name){ errName.textContent = 'お名前を入力してください。'; ok = false; }
   if(!tel || !/^[0-9\-]{10,13}$/.test(tel)){ errTel.textContent = '電話番号を正しい形式で入力してください。'; ok = false; }
   if(!pref){ errPref.textContent = '勤務形態を選択してください。'; ok = false; }
-  var okBox = document.getElementById('okBox');
-  if(ok){ okBox.classList.add('show'); } else { okBox.classList.remove('show'); }
+  document.getElementById('ok').hidden = !ok;
 });
 </script>
 </body>
