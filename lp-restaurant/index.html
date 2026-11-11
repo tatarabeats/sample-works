@@ -21,7 +21,7 @@ header.site{display:flex;align-items:center;justify-content:space-between;gap:16
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px}
 nav a{text-decoration:none}
 nav a:hover{color:var(--accent)}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 26px;border-radius:999px;font:700 15px/1.4 system-ui,-apple-system,"Hiragino Sans","Meiryo",sans-serif;border:0;cursor:pointer}
+.btn{display:inline-block;white-space:nowrap;background:var(--accent);color:#fff;text-decoration:none;padding:12px 26px;border-radius:999px;font:700 15px/1.4 system-ui,-apple-system,"Hiragino Sans","Meiryo",sans-serif;border:0;cursor:pointer}
 .btn:hover{background:var(--accent-d)}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:40px 0 70px}
@@ -61,6 +61,7 @@ table.shop th{width:7.5em;color:var(--muted);font-weight:400}
 footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 @media (max-width:860px){
   nav ul{display:none}
+  .hero h1{font-size:clamp(22px,6.6vw,34px)}
   .hero{grid-template-columns:1fr;padding-top:10px;gap:28px}
   .features,.voice{grid-template-columns:1fr}
   .menu,.course,.info{grid-template-columns:1fr}
