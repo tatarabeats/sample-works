@@ -31,6 +31,7 @@ function frToHalf(s) {
 function frPhone(s) {
   var d = frToHalf(s).replace(/[^\d]/g, '');
   if (/^0[789]0\d{8}$/.test(d)) return d.slice(0, 3) + '-' + d.slice(3, 7) + '-' + d.slice(7);
+  if (/^0[789]0/.test(d)) return ''; // 携帯の番号なのに11桁でない
   if (/^0\d{9}$/.test(d)) return d.slice(0, 2) + '-' + d.slice(2, 6) + '-' + d.slice(6);
   return '';
 }
@@ -62,6 +63,7 @@ function frClean(rows) {
     var problems = [];
     if (!at) problems.push('日時が読めない');
     if (!name) problems.push('お名前が空');
+    if (frToHalf(r[2]) && !tel) problems.push('電話番号の桁が合わない');
     if (!tel && !mail) problems.push('連絡先が無い');
     if (mail && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) problems.push('メールの形が不正');
     var key = (mail || tel) + '|' + body;

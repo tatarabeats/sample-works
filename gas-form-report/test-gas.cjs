@@ -41,6 +41,7 @@ check('不正なメールは要確認', () => assert.strictEqual(clean[4][7], '�
 check('お名前が空は要確認', () => assert.strictEqual(clean[6][7], '要確認'));
 check('同じ内容の再送は重複として要確認', () => assert.ok(r.review.some(x => x.line === 9 && /重複/.test(x.problems.join()))));
 check('桁の合わない電話・メールなしは要確認', () => assert.ok(r.review.some(x => x.line === 13)));
+check('携帯の番号が10桁なら形を作らず要確認', () => assert.ok(clean[7][3] === '' && clean[7][7] === '要確認'));
 check('「予約をキャンセル」は解約に入れる', () => assert.strictEqual(clean[12][5], '解約'));
 check('ISO 形式の日時も読める', () => assert.strictEqual(clean[13][1], '2026-11-08 14:20'));
 check('種別の振り分け（予約・見積・解約・その他）', () => assert.deepStrictEqual(clean.slice(1).map(x => x[5]).filter((v, i, a) => a.indexOf(v) === i).sort(), ['その他', '予約', '解約', '見積'].sort()));
