@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>株式会社ノビラ コーポレートサイト リニューアル（架空の会社）｜LP 自主制作の見本</title>
+<meta name="description" content="コーポレートサイトリニューアルのトップページ構成の自主制作見本です。会社名・サービス内容・数値はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#1f2937;--muted:#6b7280;--navy:#1d3a5f;--navy-d:#132a44;--accent:#2f7de0;--line:#e3e8ee;--bg:#f7f9fc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1100px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px;white-space:nowrap;color:var(--navy-d)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--accent)}
+.btn{display:inline-block;white-space:nowrap;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:8px;border:0;cursor:pointer;font-size:15px}
+.btn.outline{background:#fff;color:var(--navy-d);border:1.5px solid var(--line)}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-d) 100%);border-radius:20px;padding:56px;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;margin-bottom:22px;color:#fff}
+.hero .pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;color:#cfe0f7}
+.hero h1{font-size:clamp(26px,4vw,42px);line-height:1.5;margin:16px 0;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1 mark{background:linear-gradient(transparent 62%,#2f7de0 62%);color:inherit}
+.hero p{color:#c9d6e6;margin:0 0 24px}
+.hero .btn.outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.stats{display:flex;gap:18px;margin-top:22px}
+.stats div{background:rgba(255,255,255,.08);border-radius:12px;padding:12px 16px;text-align:center;flex:1}
+.stats b{display:block;font-size:20px}
+.stats small{color:#b9c8dc;font-size:12px}
+section{padding:64px 0}
+.eyebrow{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(23px,3vw,32px);margin:6px 0 28px;line-height:1.5}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.card .ic{width:44px;height:44px;margin-bottom:12px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;position:relative}
+.flow b{color:var(--accent);font-size:13px;display:block;margin-bottom:6px}
+.flow p{margin:0;font-size:13px;color:var(--muted)}
+.news{display:grid;gap:14px}
+.news a{display:flex;justify-content:space-between;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;text-decoration:none}
+.news time{color:var(--muted);font-size:13px;flex-shrink:0}
+.news span.tag{background:#eef4fc;color:var(--accent);font-size:12px;font-weight:700;border-radius:999px;padding:2px 10px;margin-right:10px}
+.news p{margin:0;font-size:14px}
+.entry{background:#fff;border:1px solid var(--line);border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.entry p{color:var(--muted)}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select,form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#f7f9fc;color:var(--ink);font-size:15px;margin-bottom:6px;font-family:inherit}
+.err{color:#b23a4c;font-size:13px;min-height:1.3em;margin-bottom:8px}
+.ok{background:#eef4fc;border:1px solid #bcd6f5;border-radius:10px;padding:14px;margin-top:8px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.entry{grid-template-columns:1fr;padding:28px}
+  .cards{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .stats{flex-wrap:wrap}
+  section{padding:48px 0}
+}
+@media (max-width:480px){.logo{font-size:14px;gap:6px}header.site .btn{padding:10px 16px;font-size:13px}.hero h1{font-size:clamp(21px,6.4vw,26px)}.flow{grid-template-columns:1fr}.stats{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の会社・架空のデータ。実在の企業のご依頼ではありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="7" fill="#1d3a5f"/><path d="M9 22V12l7-4 7 4v10" stroke="#fff" stroke-width="2" fill="none" stroke-linejoin="round"/><rect x="14" y="16" width="4" height="6" fill="#fff"/></svg>株式会社ノビラ（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#service">事業内容</a></li><li><a href="#flow">ご依頼の流れ</a></li><li><a href="#news">お知らせ</a></li></ul></nav>
+  <a class="btn" href="#contact">お問い合わせ</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">コーポレートサイト リニューアル（見本）</span>
+      <h1>信頼感のある<mark>シンプルな</mark>サイトで、<br>問い合わせを増やす。</h1>
+      <p>創業から20年、設備管理サービスを手がける企業の、コーポレートサイト全体リニューアルの見本です。清潔感のあるデザインと、分かりやすいサービス紹介で問い合わせ数の向上を目指します。</p>
+      <a class="btn outline" href="#contact">お問い合わせはこちら</a>
+      <div class="stats">
+        <div><b>28</b><small>制作ページ数（見本上の想定）</small></div>
+        <div><b>3</b><small>端末対応（PC・タブレット・SP）</small></div>
+        <div><b>月1回〜</b><small>更新できるお知らせ欄</small></div>
+      </div>
+    </div>
+    <svg viewBox="0 0 440 320" aria-hidden="true">
+      <rect x="40" y="40" width="360" height="240" rx="16" fill="#ffffff" opacity=".06"/>
+      <rect x="70" y="70" width="300" height="40" rx="8" fill="#ffffff" opacity=".12"/>
+      <rect x="70" y="130" width="130" height="90" rx="10" fill="#ffffff" opacity=".1"/>
+      <rect x="215" y="130" width="155" height="40" rx="8" fill="#ffffff" opacity=".18"/>
+      <rect x="215" y="180" width="155" height="40" rx="8" fill="#ffffff" opacity=".12"/>
+      <rect x="70" y="235" width="300" height="24" rx="6" fill="#2f7de0" opacity=".6"/>
+    </svg>
+  </div>
+
+  <section id="service">
+    <div class="eyebrow">SERVICE</div>
+    <h2>事業内容（見本・架空の内容）</h2>
+    <div class="cards">
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#eef4fc"/><path d="M14 22h16M22 14v16" stroke="#2f7de0" stroke-width="2.6" stroke-linecap="round"/></svg><h3>設備保守・点検</h3><p>オフィス・商業施設の空調・電気設備の定期点検と保守を行います。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#eef4fc"/><path d="M14 28c2-8 14-8 16 0" stroke="#2f7de0" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="22" cy="16" r="4" fill="#2f7de0"/></svg><h3>改修工事のご提案</h3><p>経年劣化した設備の改修提案から、工事会社の調整まで一括して対応します。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><rect x="10" y="10" width="24" height="24" rx="6" fill="#eef4fc"/><path d="M15 22l5 5 9-11" stroke="#2f7de0" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>24時間緊急対応</h3><p>設備の不具合を24時間受付し、翌営業日までに現地確認に伺います。</p></div>
+    </div>
+  </section>
+
+  <section id="flow" style="background:#fff;border-radius:20px;border:1px solid var(--line)">
+    <div class="wrap" style="padding:0 24px">
+    <div class="eyebrow">FLOW</div>
+    <h2>ご依頼の流れ（見本）</h2>
+    <div class="flow">
+      <div><b>STEP 1</b><p>お問い合わせフォームよりご連絡</p></div>
+      <div><b>STEP 2</b><p>担当より現地調査のご案内</p></div>
+      <div><b>STEP 3</b><p>お見積り・ご提案内容のご説明</p></div>
+      <div><b>STEP 4</b><p>ご契約後、作業日程を調整</p></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="eyebrow">NEWS</div>
+    <h2>お知らせ（見本・CMSで更新する想定の一覧）</h2>
+    <div class="news">
+      <a href="#"><div><span class="tag">お知らせ</span><p>ウェブサイトをリニューアルしました（見本）</p></div><time>2026.11.01</time></a>
+      <a href="#"><div><span class="tag">採用</span><p>設備管理スタッフの中途採用を開始しました（見本）</p></div><time>2026.10.15</time></a>
+      <a href="#"><div><span class="tag">営業</span><p>年末年始の営業日についてのお知らせ（見本）</p></div><time>2026.10.02</time></a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="entry">
+      <div>
+        <div class="eyebrow">CONTACT</div>
+        <h2 style="margin-top:6px">お問い合わせフォーム（見本）</h2>
+        <p>実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">会社名・ご担当者名</label>
+        <input id="name" name="name" type="text" placeholder="ノビラ商事 山田 太郎">
+        <div class="err" id="errName"></div>
+        <label for="mail">メールアドレス</label>
+        <input id="mail" name="mail" type="text" autocomplete="off" placeholder="example@example.com">
+        <div class="err" id="errMail"></div>
+        <label for="pref">お問い合わせ内容</label>
+        <select id="pref" name="pref">
+          <option value="">選択してください</option>
+          <option>設備点検について</option>
+          <option>改修工事の相談</option>
+          <option>その他のお問い合わせ</option>
+        </select>
+        <div class="err" id="errPref"></div>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。会社名・サービス内容・お知らせ・数値はすべて架空であり、実在の企業のご依頼とは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var mail = document.getElementById('mail').value.trim();
+  var pref = document.getElementById('pref').value;
+  var errName = document.getElementById('errName');
+  var errMail = document.getElementById('errMail');
+  var errPref = document.getElementById('errPref');
+  errName.textContent = ''; errMail.textContent = ''; errPref.textContent = '';
+  if(!name){ errName.textContent = '会社名・ご担当者名を入力してください。'; ok = false; }
+  if(!mail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){ errMail.textContent = 'メールアドレスを正しい形式で入力してください。'; ok = false; }
+  if(!pref){ errPref.textContent = 'お問い合わせ内容を選択してください。'; ok = false; }
+  document.getElementById('ok').hidden = !ok;
+});
+</script>
+</body>
+</html>
