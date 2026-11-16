@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ひより（架空）Vlog・ライフスタイル LP｜自主制作の見本</title>
+<meta name="description" content="Vlog・ライフスタイル系インフルエンサーの自己紹介LPの自主制作見本です。人物名・SNS・写真はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#3f372e;--muted:#8a7f71;--cream:#fbf6ee;--card:#ffffff;--terracotta:#c97b5a;--sage:#8a9a7b;--line:#ece3d4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.9 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1020px,100% - 48px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:18px;letter-spacing:.04em;color:var(--ink)}
+.logo svg{flex-shrink:0}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:13px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--terracotta)}
+.btn{display:inline-block;white-space:nowrap;background:var(--terracotta);color:#fff;font-weight:700;text-decoration:none;padding:13px 30px;border-radius:999px;border:0;cursor:pointer;font-size:14px;letter-spacing:.03em}
+.btn.outline{background:transparent;color:var(--terracotta);border:1.5px solid var(--terracotta)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:30px 0 70px}
+.hero .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--terracotta);letter-spacing:.06em}
+.hero h1{font-size:clamp(26px,3.6vw,38px);line-height:1.6;margin:18px 0;font-weight:800}
+.hero h1 span{color:var(--terracotta)}
+.hero p{color:var(--muted);margin:0 0 26px;font-size:15px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .sns{display:flex;gap:10px;margin-top:22px}
+.hero .sns a{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.photo-card{background:linear-gradient(160deg,#f3d9c4,#d7c9a3 55%,#b9c7a4);border-radius:28px;aspect-ratio:4/5;position:relative;overflow:hidden;box-shadow:0 18px 40px -20px rgba(80,60,30,.35)}
+.photo-card svg{position:absolute;inset:0}
+.photo-card .tag{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.88);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:700;color:var(--ink)}
+section{padding:60px 0}
+.eyebrow{color:var(--terracotta);font-weight:800;font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+h2{font-size:clamp(22px,3vw,30px);margin:8px 0 10px;font-weight:800}
+.lead{color:var(--muted);margin:0 0 30px;font-size:14.5px}
+.profile{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px;display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:center}
+.profile .avatar{aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#eccba9,#c8d6b4);position:relative;overflow:hidden}
+.profile .avatar svg{position:absolute;inset:0}
+.profile dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:18px 0 0;font-size:14px}
+.profile dt{color:var(--muted);font-weight:700}
+.profile dd{margin:0}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery .g{aspect-ratio:1;border-radius:16px;position:relative;overflow:hidden}
+.gallery .g svg{position:absolute;inset:0}
+.vlogs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vlog{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.vlog .thumb{aspect-ratio:16/9;position:relative;background:linear-gradient(135deg,#e7ddc9,#cdd9bf)}
+.vlog .thumb svg{position:absolute;inset:0}
+.vlog .thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vlog .body{padding:16px 18px}
+.vlog .body b{display:block;font-size:14px;margin-bottom:4px}
+.vlog .body small{color:var(--muted);font-size:12px}
+.pr{background:linear-gradient(135deg,var(--terracotta),#b5633f);border-radius:28px;padding:50px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.pr h2{color:#fff}
+.pr p{color:#fbe6da;margin:0 0 24px;font-size:14.5px}
+.pr .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.pr .chips span{background:rgba(255,255,255,.16);border-radius:999px;padding:6px 14px;font-size:12px}
+.entry{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:44px}
+.entry .top{text-align:center;max-width:460px;margin:0 auto 28px}
+form{max-width:480px;margin:0 auto}
+form label{display:block;font-weight:700;font-size:13px;margin-bottom:6px;color:var(--ink)}
+form input,form select,form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--cream);color:var(--ink);font-size:14.5px;margin-bottom:6px;font-family:inherit}
+form textarea{resize:vertical;min-height:84px}
+.err{color:#b23a4c;font-size:12.5px;min-height:1.3em;margin-bottom:8px}
+.ok{background:#f1f5e9;border:1px solid #c9d8b4;border-radius:12px;padding:14px;margin-top:10px;font-size:14px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;text-align:center}
+@media (max-width:860px){
+  .hero,.profile,.pr{grid-template-columns:1fr}
+  .hero{text-align:left}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .vlogs{grid-template-columns:1fr}
+  nav ul{display:none}
+  .profile,.entry,.pr{padding:28px}
+  section{padding:44px 0}
+}
+@media (max-width:480px){
+  .logo{font-size:15px}
+  header.site .btn{padding:10px 18px;font-size:13px}
+  .photo-card{aspect-ratio:1/1}
+}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空のインフルエンサー・架空のデータ。実在の方のご依頼ではありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#c97b5a"/><path d="M10 20c1.5-5 10.5-5 12 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="16" cy="12" r="4.2" fill="#fff"/></svg>ひより（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#profile">プロフィール</a></li><li><a href="#vlog">Vlog</a></li><li><a href="#gallery">ギャラリー</a></li><li><a href="#pr">お仕事のご相談</a></li></ul></nav>
+  <a class="btn" href="#pr">PR・タイアップのご相談</a>
+</header>
+<main id="top">
+  <section class="hero" style="padding-top:10px">
+    <div>
+      <span class="pill">VLOG & LIFESTYLE CREATOR</span>
+      <h1>丁寧な暮らしと、<br><span>等身大の毎日</span>を届けています。</h1>
+      <p>Vlog・ライフスタイル系で発信しているひより（架空の人物）の自己紹介ページの見本です。普段の暮らしや人柄が伝わる構成にし、企業様からのPR・タイアップのご相談につなげることを想定しています。</p>
+      <div class="actions">
+        <a class="btn" href="#pr">お仕事のご相談はこちら</a>
+        <a class="btn outline" href="#vlog">Vlogを見る</a>
+      </div>
+      <div class="sns" aria-hidden="true">
+        <a><svg width="16" height="16" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#c97b5a" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="#c97b5a" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="#c97b5a"/></svg></a>
+        <a><svg width="16" height="16" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="#c97b5a" stroke-width="1.6"/><path d="M9 9l6 3-6 3V9z" fill="#c97b5a"/></svg></a>
+        <a><svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 7a4 4 0 0 1-3-3.6V14a4.6 4.6 0 1 1-4-4.5" fill="none" stroke="#c97b5a" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+    <div class="photo-card">
+      <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice"><rect width="400" height="480" fill="#f1e2cd"/><circle cx="200" cy="190" r="86" fill="#e7c4a0"/><path d="M90 480c10-90 220-90 220 0" fill="#d8b793"/><circle cx="200" cy="170" r="60" fill="#f3d6b8"/></svg>
+      <span class="tag">見本用イラスト（本人写真の代わり）</span>
+    </div>
+  </section>
+
+  <section id="profile">
+    <div class="eyebrow">PROFILE</div>
+    <h2>プロフィール・自己紹介（見本）</h2>
+    <p class="lead">普段の暮らしと活動を知っていただくための紹介です。内容はすべて見本用の架空の設定です。</p>
+    <div class="profile">
+      <div class="avatar"><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice"><rect width="300" height="300" fill="#eadcc2"/><circle cx="150" cy="130" r="58" fill="#e3bd98"/><path d="M50 300c8-70 192-70 200 0" fill="#d2ab84"/></svg></div>
+      <div>
+        <p>丁寧な暮らしと、気負わない日々の記録をテーマにVlogを中心に発信しています。料理・お部屋づくり・お出かけ先の空気感を、見た方がほっとできるような形でお届けすることを心がけています（見本用の設定です）。</p>
+        <dl>
+          <dt>発信テーマ</dt><dd>丁寧な暮らし・ライフスタイルVlog（見本）</dd>
+          <dt>活動媒体</dt><dd>動画配信・写真共有・交流サービス（見本）</dd>
+          <dt>発信頻度</dt><dd>週2〜3本更新を想定（見本）</dd>
+          <dt>これまでのお仕事</dt><dd>生活雑貨・カフェのPR投稿（見本の想定事例）</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="vlog">
+    <div class="eyebrow">VLOG</div>
+    <h2>普段のVlog・コンテンツ（見本）</h2>
+    <p class="lead">実際の制作では、企業様からの投稿依頼時に見やすいよう代表的な動画を3〜4本ピックアップして掲載する想定です。</p>
+    <div class="vlogs">
+      <div class="vlog">
+        <div class="thumb"><svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><rect width="320" height="180" fill="#e3d4ba"/><rect x="40" y="40" width="120" height="90" rx="8" fill="#c9b48c"/><circle cx="230" cy="100" r="40" fill="#b7cda0"/></svg><span class="play"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#fff" opacity=".85"/><path d="M16 13l13 7-13 7V13z" fill="#c97b5a"/></svg></span></div>
+        <div class="body"><b>朝の支度とおうちコーヒー（見本）</b><small>丁寧な暮らしVlog・再生数は見本のため非掲載</small></div>
+      </div>
+      <div class="vlog">
+        <div class="thumb"><svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><rect width="320" height="180" fill="#d9c7b0"/><rect x="60" y="30" width="200" height="100" rx="10" fill="#e7b78f"/></svg><span class="play"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#fff" opacity=".85"/><path d="M16 13l13 7-13 7V13z" fill="#c97b5a"/></svg></span></div>
+        <div class="body"><b>週末のお部屋づくり（見本）</b><small>ライフスタイルVlog</small></div>
+      </div>
+      <div class="vlog">
+        <div class="thumb"><svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><rect width="320" height="180" fill="#ecdfc6"/><circle cx="110" cy="100" r="46" fill="#9fb48a"/><circle cx="220" cy="70" r="26" fill="#d8a97e"/></svg><span class="play"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#fff" opacity=".85"/><path d="M16 13l13 7-13 7V13z" fill="#c97b5a"/></svg></span></div>
+        <div class="body"><b>近所の喫茶店めぐり（見本）</b><small>お出かけVlog</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="eyebrow">GALLERY</div>
+    <h2>ライフスタイル・フォトギャラリー（見本）</h2>
+    <p class="lead">日常の空気感を伝える写真を並べる想定のギャラリーです。写真は見本用のイラストに置き換えています。</p>
+    <div class="gallery">
+      <div class="g"><svg viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><rect width="160" height="160" fill="#efe1c8"/><circle cx="80" cy="80" r="46" fill="#dcb98e"/></svg></div>
+      <div class="g"><svg viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><rect width="160" height="160" fill="#dfe6cf"/><rect x="30" y="30" width="100" height="100" rx="14" fill="#a9bd91"/></svg></div>
+      <div class="g"><svg viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><rect width="160" height="160" fill="#e9d2bb"/><path d="M0 120c30-40 100-40 160 0v40H0z" fill="#c8977a"/></svg></div>
+      <div class="g"><svg viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><rect width="160" height="160" fill="#ece0cf"/><circle cx="60" cy="60" r="26" fill="#cf9f7a"/><circle cx="110" cy="110" r="30" fill="#9db086"/></svg></div>
+    </div>
+  </section>
+
+  <section id="pr" style="padding-top:10px">
+    <div class="pr">
+      <div>
+        <div class="eyebrow" style="color:#fde8db">PR / COLLABORATION</div>
+        <h2>PR・タイアップのご相談（見本）</h2>
+        <p>ブランドイメージに合わせた投稿・撮影出演・店舗訪問など、内容に応じてご相談しながら進めたい想定の案内文です。</p>
+        <div class="chips">
+          <span>SNS投稿でのPR</span>
+          <span>撮影・出演</span>
+          <span>店舗・商品の訪問取材</span>
+        </div>
+      </div>
+      <svg viewBox="0 0 300 260" aria-hidden="true"><rect x="20" y="20" width="260" height="220" rx="20" fill="#ffffff" opacity=".12"/><circle cx="110" cy="110" r="46" fill="#ffffff" opacity=".2"/><rect x="170" y="90" width="80" height="14" rx="7" fill="#ffffff" opacity=".3"/><rect x="170" y="116" width="60" height="14" rx="7" fill="#ffffff" opacity=".22"/></svg>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="entry">
+      <div class="top">
+        <div class="eyebrow">CONTACT</div>
+        <h2>お問い合わせフォーム（見本）</h2>
+        <p class="lead" style="margin-bottom:0">実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">ご担当者名・会社名</label>
+        <input id="name" name="name" type="text" placeholder="〇〇株式会社 ご担当者名">
+        <div class="err" id="errName"></div>
+        <label for="mail">メールアドレス</label>
+        <input id="mail" name="mail" type="email" autocomplete="off" placeholder="example@example.com">
+        <div class="err" id="errMail"></div>
+        <label for="kind">ご相談内容</label>
+        <select id="kind" name="kind">
+          <option value="">選択してください</option>
+          <option>SNS投稿でのPRについて</option>
+          <option>撮影・出演のご相談</option>
+          <option>その他のお問い合わせ</option>
+        </select>
+        <div class="err" id="errKind"></div>
+        <label for="msg">ご相談内容の詳細</label>
+        <textarea id="msg" name="msg" placeholder="内容をご記入ください"></textarea>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。人物名・活動内容・写真・お仕事の実績はすべて架空であり、実在の方のご依頼とは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var mail = document.getElementById('mail').value.trim();
+  var kind = document.getElementById('kind').value;
+  var errName = document.getElementById('errName');
+  var errMail = document.getElementById('errMail');
+  var errKind = document.getElementById('errKind');
+  errName.textContent = ''; errMail.textContent = ''; errKind.textContent = '';
+  if(!name){ errName.textContent = 'ご担当者名・会社名を入力してください。'; ok = false; }
+  if(!mail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){ errMail.textContent = 'メールアドレスを正しい形式で入力してください。'; ok = false; }
+  if(!kind){ errKind.textContent = 'ご相談内容を選択してください。'; ok = false; }
+  document.getElementById('ok').hidden = !ok;
+});
+</script>
+</body>
+</html>
