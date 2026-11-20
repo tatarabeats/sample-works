@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>株式会社フィールドブリッジ（架空） 新設法人コーポレートサイト｜LP 自主制作の見本</title>
+<meta name="description" content="新設法人のコーポレートサイト公開を想定した自主制作見本です。会社名・事業内容・数値はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#1c2531;--muted:#6b7686;--navy:#17304f;--navy-d:#0e2038;--gold:#9c7a3c;--line:#e2e6ec;--bg:#ffffff;--bg2:#f6f7f9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.9 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:16px;white-space:nowrap;color:var(--navy-d);letter-spacing:.02em}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:13.5px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--navy)}
+.btn{display:inline-block;white-space:nowrap;background:var(--navy);color:#fff;font-weight:700;text-decoration:none;padding:12px 26px;border-radius:4px;border:0;cursor:pointer;font-size:14px;letter-spacing:.04em}
+.btn.outline{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.hero{padding:76px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero .pill{display:inline-block;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 16px;font-size:12.5px;font-weight:700;color:var(--navy);letter-spacing:.06em}
+.hero h1{font-size:clamp(25px,3.6vw,38px);line-height:1.6;margin:18px 0;word-break:keep-all;overflow-wrap:anywhere;color:var(--navy-d)}
+.hero h1 b{color:var(--gold)}
+.hero p{color:var(--muted);margin:0 0 26px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.feat{display:flex;gap:16px;margin-top:30px;flex-wrap:wrap}
+.feat div{flex:1;min-width:140px;border-top:2px solid var(--navy);padding-top:10px}
+.feat b{display:block;font-size:13px;color:var(--navy-d);margin-bottom:4px}
+.feat span{font-size:12.5px;color:var(--muted)}
+section{padding:62px 0}
+section.alt{background:var(--bg2)}
+.eyebrow{color:var(--gold);font-weight:800;font-size:11.5px;letter-spacing:.3em}
+h2{font-size:clamp(21px,2.6vw,28px);margin:8px 0 10px;line-height:1.5;color:var(--navy-d)}
+.lead{color:var(--muted);margin:0 0 30px;max-width:640px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:28px}
+.card .ic{width:40px;height:40px;margin-bottom:14px}
+.card h3{margin:0 0 10px;font-size:16px;color:var(--navy-d)}
+.card p{margin:0;font-size:13.5px;color:var(--muted)}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
+.badge{background:#fff;border:1px solid var(--line);border-radius:4px;padding:20px 12px;text-align:center;font-size:13px;font-weight:700;color:var(--navy-d)}
+.badge small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;margin-top:4px}
+table.profile{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+table.profile th,table.profile td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);font-size:14px}
+table.profile th{width:170px;color:var(--muted);font-weight:700;background:var(--bg2)}
+table.profile tr:last-child th,table.profile tr:last-child td{border-bottom:0}
+.entry{background:#fff;border:1px solid var(--line);border-radius:4px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.entry p{color:var(--muted)}
+form label{display:block;font-weight:700;font-size:13.5px;margin-bottom:6px;color:var(--navy-d)}
+form input,form select,form textarea{width:100%;padding:12px;border-radius:3px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);font-size:15px;margin-bottom:6px;font-family:inherit}
+.err{color:#b23a4c;font-size:12.5px;min-height:1.3em;margin-bottom:8px}
+.ok{background:#eef3ee;border:1px solid #bcd6c3;border-radius:4px;padding:14px;margin-top:8px;font-size:13.5px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:12.5px;text-align:center;border-top:1px solid var(--line)}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero{grid-template-columns:1fr;padding:48px 0}
+  .entry{grid-template-columns:1fr;padding:28px}
+  .cards{grid-template-columns:1fr}
+  .badges{grid-template-columns:1fr 1fr}
+  table.profile th{width:120px}
+  section{padding:46px 0}
+}
+@media (max-width:480px){
+  .logo{font-size:13.5px;gap:6px}
+  header.site .btn{padding:10px 16px;font-size:12.5px}
+  .hero h1{font-size:clamp(20px,6vw,24px)}
+  .feat{flex-direction:column}
+  .badges{grid-template-columns:1fr}
+  table.profile th,table.profile td{padding:12px 14px;font-size:13px}
+  table.profile th{width:92px}
+}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の会社・架空のデータ。実在の企業のご依頼ではありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="4" fill="#17304f"/><path d="M8 22l8-9 8 9" stroke="#fff" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/><circle cx="16" cy="11" r="2" fill="#9c7a3c"/></svg>株式会社フィールドブリッジ（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#business">事業内容</a></li><li><a href="#partnership">提携</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+  <a class="btn outline" href="#contact">お問い合わせ</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">CORPORATE SITE（新規公開・見本）</span>
+      <h1>信頼を積み重ね、<br><b>事業のつながり</b>を育てる会社。</h1>
+      <p>株式会社フィールドブリッジ（架空）は、企業同士の事業提携とコンサルティングを手がける新設法人です。取引先・提携先の皆様に安心してお付き合いいただけるよう、会社概要と事業内容を分かりやすくご紹介します。</p>
+      <div class="ctas">
+        <a class="btn" href="#company">会社概要を見る</a>
+        <a class="btn outline" href="#contact">お問い合わせ</a>
+      </div>
+      <div class="feat">
+        <div><b>設立</b><span>2026年（見本上の想定）</span></div>
+        <div><b>事業領域</b><span>事業開発・業務提携・経営支援</span></div>
+        <div><b>対応</b><span>全国（オンライン面談可）</span></div>
+      </div>
+    </div>
+    <svg viewBox="0 0 440 320" aria-hidden="true">
+      <rect x="20" y="40" width="400" height="240" rx="6" fill="#f6f7f9" stroke="#e2e6ec"/>
+      <path d="M60 220l80-90 60 40 80-70 100 60" stroke="#17304f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="140" cy="130" r="7" fill="#9c7a3c"/>
+      <circle cx="200" cy="170" r="7" fill="#17304f"/>
+      <circle cx="280" cy="100" r="7" fill="#17304f"/>
+      <circle cx="380" cy="160" r="7" fill="#9c7a3c"/>
+      <rect x="60" y="230" width="340" height="2" fill="#e2e6ec"/>
+    </svg>
+  </div>
+
+  <section id="business">
+    <div class="eyebrow">BUSINESS</div>
+    <h2>事業内容（見本・架空の内容）</h2>
+    <p class="lead">3つの領域で、企業の事業拡大と信頼構築を支援します（紹介文はすべて見本用の架空内容です）。</p>
+    <div class="cards">
+      <div class="card"><svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f6f7f9"/><path d="M13 20h14M20 13v14" stroke="#17304f" stroke-width="2.4" stroke-linecap="round"/></svg><h3>事業開発支援</h3><p>新規事業の立ち上げにあたり、企画立案から提携先の選定までを一貫して支援します。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f6f7f9"/><path d="M13 25c2-7 12-7 14 0" stroke="#17304f" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="14" r="3.5" fill="#9c7a3c"/></svg><h3>業務提携コーディネート</h3><p>企業間の業務提携や協業について、条件整理から契約締結までをサポートします。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 40 40"><rect x="9" y="9" width="22" height="22" rx="5" fill="#f6f7f9"/><path d="M14 20l5 5 8-10" stroke="#17304f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>経営コンサルティング</h3><p>設立間もない企業に向けて、体制づくりや事業計画の策定を継続的にご支援します。</p></div>
+    </div>
+  </section>
+
+  <section id="partnership" class="alt">
+    <div class="wrap" style="padding:0 24px">
+    <div class="eyebrow">PARTNERSHIP</div>
+    <h2>事業者との連携（見本・架空の内容）</h2>
+    <p class="lead">様々な業種の事業者と連携し、お取引先の事業拡大を後押ししています（社名はすべて見本用の架空名です）。</p>
+    <div class="badges">
+      <div class="badge">株式会社ミナモ商事<small>卸売・流通</small></div>
+      <div class="badge">合同会社ハレトラスト<small>人材紹介</small></div>
+      <div class="badge">株式会社オリエ工房<small>製造</small></div>
+      <div class="badge">ノトス経営研究所<small>経営支援</small></div>
+    </div>
+    <p class="lead" style="margin-bottom:0">新規の事業提携に関するご相談も、お問い合わせフォームより承っております。</p>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="eyebrow">COMPANY</div>
+    <h2>会社概要（見本・架空の内容）</h2>
+    <table class="profile">
+      <tr><th>会社名</th><td>株式会社フィールドブリッジ（架空）</td></tr>
+      <tr><th>設立</th><td>2026年（見本上の想定）</td></tr>
+      <tr><th>所在地</th><td>見本のため非公開（架空の所在地を想定）</td></tr>
+      <tr><th>事業内容</th><td>事業開発支援、業務提携コーディネート、経営コンサルティング</td></tr>
+      <tr><th>資本金</th><td>見本のため非公開（架空の数値を想定）</td></tr>
+    </table>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap" style="padding:0 24px">
+    <div class="entry">
+      <div>
+        <div class="eyebrow">CONTACT</div>
+        <h2 style="margin-top:6px">お問い合わせフォーム（見本）</h2>
+        <p>実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">会社名・ご担当者名</label>
+        <input id="name" name="name" type="text" placeholder="フィールドブリッジ商事 山田 太郎">
+        <div class="err" id="errName"></div>
+        <label for="mail">メールアドレス</label>
+        <input id="mail" name="mail" type="email" autocomplete="off" placeholder="example@example.com">
+        <div class="err" id="errMail"></div>
+        <label for="pref">お問い合わせ内容</label>
+        <select id="pref" name="pref">
+          <option value="">選択してください</option>
+          <option>事業提携のご相談</option>
+          <option>取材・掲載のご相談</option>
+          <option>その他のお問い合わせ</option>
+        </select>
+        <div class="err" id="errPref"></div>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。会社名・事業内容・提携先・数値はすべて架空であり、実在の企業のご依頼とは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var mail = document.getElementById('mail').value.trim();
+  var pref = document.getElementById('pref').value;
+  var errName = document.getElementById('errName');
+  var errMail = document.getElementById('errMail');
+  var errPref = document.getElementById('errPref');
+  errName.textContent = ''; errMail.textContent = ''; errPref.textContent = '';
+  if(!name){ errName.textContent = '会社名・ご担当者名を入力してください。'; ok = false; }
+  if(!mail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){ errMail.textContent = 'メールアドレスを正しい形式で入力してください。'; ok = false; }
+  if(!pref){ errPref.textContent = 'お問い合わせ内容を選択してください。'; ok = false; }
+  document.getElementById('ok').hidden = !ok;
+});
+</script>
+</body>
+</html>
