@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ロゼ パーソナルジム（架空）女性向けLP｜自主制作の見本</title>
+<meta name="description" content="女性向けパーソナルジムの問い合わせLPの自主制作見本です。ジム名・お客様の声はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#3c2f2e;--muted:#8a7470;--rose:#b76e79;--rose-d:#96515c;--rose-l:#fbf0ee;--sand:#f6ede4;--line:#ecdcd6;--bg:#fffbf8;--gold:#c9a46b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px;white-space:nowrap;color:var(--rose-d)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--rose-d)}
+.btn{display:inline-block;white-space:nowrap;background:var(--rose-d);color:#fff;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px;border:0;cursor:pointer;font-size:15px}
+.btn.outline{background:#fff;color:var(--rose-d);border:1.5px solid var(--rose-d)}
+.hero{background:linear-gradient(135deg,var(--rose-l) 0%,var(--sand) 100%);border-radius:28px;padding:50px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-bottom:22px}
+.hero .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;color:var(--rose-d)}
+.hero h1{font-size:clamp(26px,4vw,42px);line-height:1.5;margin:16px 0;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1 mark{background:linear-gradient(transparent 62%,#f0d4c9 62%);color:inherit}
+.hero p{color:var(--muted);margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--rose-d);font-weight:700}
+section{padding:64px 0}
+.eyebrow{color:var(--rose-d);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(23px,3vw,32px);margin:6px 0 28px;line-height:1.5}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:44px;height:44px;margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.flow div{background:var(--sand);border-radius:16px;padding:18px;border:1px solid var(--line)}
+.flow b{color:var(--rose-d);display:block;font-size:13px;margin-bottom:6px}
+.flow p{margin:0;font-size:13px;color:var(--muted)}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.person{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff;display:flex;gap:16px}
+.person .face{width:58px;height:58px;flex-shrink:0}
+.person h3{margin:0 0 4px;font-size:16px}
+.person small{color:var(--rose-d);font-weight:700}
+.person p{font-size:14px;margin:10px 0 0;color:var(--muted)}
+table.req{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+table.req th,table.req td{border:1px solid var(--line);padding:14px;text-align:left;vertical-align:top}
+table.req th{background:var(--sand);width:9em;font-weight:700;color:var(--rose-d)}
+.tablebox{overflow-x:auto}
+.entry{background:#fff;border:1px solid var(--line);border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.entry p{color:var(--muted)}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--sand);color:var(--ink);font-size:15px;margin-bottom:6px}
+.err{color:#b23a4c;font-size:13px;min-height:1.3em;margin-bottom:8px}
+.ok{background:var(--rose-l);border:1px solid var(--rose);border-radius:12px;padding:14px;margin-top:8px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.entry{grid-template-columns:1fr;padding:30px}
+  .cards{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr}
+  section{padding:48px 0}
+}
+@media (max-width:480px){.logo{font-size:14px;gap:6px}header.site .btn{padding:10px 16px;font-size:13px}.hero h1{font-size:clamp(21px,6.4vw,26px)}.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空のジム・架空のデータ。実在のジムの依頼ではありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fbf0ee" stroke="#b76e79" stroke-width="1.5"/><path d="M9 16h4l3-7 4 14 3-7h4" stroke="#96515c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>ロゼ パーソナルジム（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#feature">特徴</a></li><li><a href="#voice">お客様の声</a></li><li><a href="#req">コース・料金</a></li></ul></nav>
+  <a class="btn" href="#entry">無料カウンセリング予約</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">女性専用パーソナルジム（架空）</span>
+      <h1>無理な食事制限はなし。<br><mark>私らしく</mark>なれる、<wbr>1対1のボディメイク。</h1>
+      <p>20〜40代の女性のための完全個室パーソナルジムです。管理栄養士監修の食事指導と、女性トレーナーによるマンツーマン指導で、無理なく理想のボディラインへ。初回カウンセリングは無料です。</p>
+      <a class="btn" href="#entry">無料カウンセリングに申し込む</a>
+      <div class="chips"><span>完全個室・女性専用</span><span>食事指導つき</span><span>初回全額返金保証</span></div>
+    </div>
+    <svg viewBox="0 0 440 320" aria-hidden="true">
+      <circle cx="220" cy="160" r="140" fill="#fbf0ee"/>
+      <g transform="translate(110 60)">
+        <rect x="10" y="60" width="200" height="150" rx="22" fill="#ffffff" stroke="#b76e79" stroke-width="3"/>
+        <circle cx="70" cy="50" r="32" fill="#f0d4c9"/>
+        <path d="M46 46c6-12 42-12 48 0" stroke="#96515c" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <rect x="110" y="90" width="80" height="12" rx="6" fill="#f3e1dc"/>
+        <rect x="110" y="114" width="60" height="12" rx="6" fill="#f3e1dc"/>
+        <rect x="40" y="150" width="140" height="14" rx="7" fill="#c9a46b"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="feature">
+    <div class="eyebrow">FEATURE</div>
+    <h2>ロゼが選ばれる3つの理由</h2>
+    <div class="cards">
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fbf0ee"/><path d="M14 22h16M22 14v16" stroke="#96515c" stroke-width="2.6" stroke-linecap="round"/></svg><h3>完全個室・女性専用</h3><p>他のお客様と会わない個室空間で、人目を気にせず通っていただけます。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fbf0ee"/><path d="M14 28c2-8 14-8 16 0" stroke="#96515c" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="22" cy="16" r="4" fill="#96515c"/></svg><h3>管理栄養士の食事指導</h3><p>厳しい食事制限ではなく、無理なく続けられる食事の整え方をご提案します。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><rect x="10" y="10" width="24" height="24" rx="6" fill="#fbf0ee"/><path d="M15 22l5 5 9-11" stroke="#96515c" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>全額返金保証</h3><p>初回体験後、2回目のご利用前まででしたら全額返金いたします（見本の架空の内容）。</p></div>
+    </div>
+  </section>
+
+  <section id="flowsec" style="background:var(--sand);border-radius:28px">
+    <div class="wrap" style="padding:0 20px">
+    <div class="eyebrow">FLOW</div>
+    <h2>ご入会までの流れ</h2>
+    <div class="flow">
+      <div><b>STEP 1</b><p>無料カウンセリングのお申し込み</p></div>
+      <div><b>STEP 2</b><p>体組成計測・お悩みヒアリング</p></div>
+      <div><b>STEP 3</b><p>体験トレーニング（60分）</p></div>
+      <div><b>STEP 4</b><p>コースご提案・ご入会</p></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="voice">
+    <div class="eyebrow">VOICE</div>
+    <h2>お客様の声（架空）</h2>
+    <div class="people">
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fbf0ee"/><circle cx="29" cy="24" r="10" fill="#f0a9b2"/><path d="M14 46c3-12 27-12 30 0" fill="#f0a9b2"/></svg>
+        <div><h3>M.T さん（架空）・32歳</h3><small>3か月コースご利用</small><p>トレーナーさんが私の生活リズムに合わせて食事メニューを考えてくれたので、無理なく継続できました。</p></div>
+      </div>
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fbf0ee"/><circle cx="29" cy="24" r="10" fill="#b76e79"/><path d="M14 46c3-12 27-12 30 0" fill="#b76e79"/></svg>
+        <div><h3>S.K さん（架空）・27歳</h3><small>2か月コースご利用</small><p>完全個室なので周りを気にせず集中できました。初めてのトレーニングでも安心して通えました。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="req">
+    <div class="eyebrow">COURSE</div>
+    <h2>コース・料金（見本・架空の内容）</h2>
+    <div class="tablebox">
+    <table class="req">
+      <tr><th>体験コース</th><td>60分・税込5,500円（初回限定・見本の架空の金額）</td></tr>
+      <tr><th>2か月コース</th><td>全16回・税込198,000円（食事指導つき）</td></tr>
+      <tr><th>3か月コース</th><td>全24回・税込278,000円（食事指導つき）</td></tr>
+      <tr><th>営業時間</th><td>10:00〜22:00（年中無休）</td></tr>
+      <tr><th>店舗</th><td>完全個室・女性トレーナーのみ在籍</td></tr>
+      <tr><th>保証制度</th><td>初回体験後、2回目利用前までの全額返金保証</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section id="entry">
+    <div class="entry">
+      <div>
+        <div class="eyebrow">ENTRY</div>
+        <h2 style="margin-top:6px">無料カウンセリング予約フォーム（見本）</h2>
+        <p>実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">お名前</label>
+        <input id="name" name="name" type="text" placeholder="山田 花子">
+        <div class="err" id="errName"></div>
+        <label for="t">電話番号</label>
+        <input id="t" name="tel" inputmode="tel" autocomplete="off" placeholder="090-0000-0000">
+        <div class="err" id="errTel"></div>
+        <label for="pref">ご希望の来店時間帯</label>
+        <select id="pref" name="pref">
+          <option value="">選択してください</option>
+          <option>午前（10:00〜13:00）</option>
+          <option>午後（13:00〜18:00）</option>
+          <option>夜（18:00〜22:00）</option>
+        </select>
+        <div class="err" id="errPref"></div>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。ジム名・お客様の声・数値はすべて架空であり、実在のジム・求人とは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var tel = document.getElementById('t').value.trim();
+  var pref = document.getElementById('pref').value;
+  var errName = document.getElementById('errName');
+  var errTel = document.getElementById('errTel');
+  var errPref = document.getElementById('errPref');
+  errName.textContent = ''; errTel.textContent = ''; errPref.textContent = '';
+  if(!name){ errName.textContent = 'お名前を入力してください。'; ok = false; }
+  if(!tel || !/^[0-9\-]{10,13}$/.test(tel)){ errTel.textContent = '電話番号を正しい形式で入力してください。'; ok = false; }
+  if(!pref){ errPref.textContent = 'ご希望の時間帯を選択してください。'; ok = false; }
+  document.getElementById('ok').hidden = !ok;
+});
+</script>
+</body>
+</html>
