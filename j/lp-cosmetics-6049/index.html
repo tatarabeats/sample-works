@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ツヤベール美容液（架空）女性向けコスメLP｜自主制作の見本</title>
+<meta name="description" content="美容・コスメ商材の購買心理訴求型LPの自主制作見本です。商品名・口コミ・数値はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#4a3b38;--muted:#8a7772;--pink:#e8929f;--pink-d:#c66477;--pink-l:#fdf0f1;--beige:#f7f1e8;--line:#ecdfd9;--bg:#fffaf7;--gold:#c99a52}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px;white-space:nowrap;color:var(--pink-d)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--pink-d)}
+.btn{display:inline-block;white-space:nowrap;background:var(--pink-d);color:#fff;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px;border:0;cursor:pointer;font-size:15px}
+.btn.outline{background:#fff;color:var(--pink-d);border:1.5px solid var(--pink-d)}
+.hero{background:linear-gradient(135deg,var(--pink-l) 0%,var(--beige) 100%);border-radius:28px;padding:50px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-bottom:22px}
+.hero .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;color:var(--pink-d)}
+.hero h1{font-size:clamp(24px,3.6vw,38px);line-height:1.55;margin:16px 0;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1 mark{background:linear-gradient(transparent 62%,#f6c9ce 62%);color:inherit}
+.hero p{color:var(--muted);margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--pink-d);font-weight:700}
+section{padding:60px 0}
+.eyebrow{color:var(--pink-d);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(22px,3vw,30px);margin:6px 0 28px;line-height:1.5}
+.lead{color:var(--muted);margin:-10px 0 28px;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:44px;height:44px;margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.day{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.day div{background:#fff;border-radius:16px;padding:18px 14px;border:1px solid var(--line)}
+.day time{font-weight:800;color:var(--pink-d);display:block;font-size:14px}
+.day p{margin:6px 0 0;font-size:13px;color:var(--muted)}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.person{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff;display:flex;gap:16px}
+.person .face{width:58px;height:58px;flex-shrink:0}
+.person h3{margin:0 0 2px;font-size:16px}
+.person .stars{color:var(--gold);font-size:14px;letter-spacing:1px}
+.person small{color:var(--pink-d);font-weight:700;display:block;margin:2px 0 8px}
+.person p{font-size:14px;margin:0;color:var(--muted)}
+table.req{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+table.req th,table.req td{border:1px solid var(--line);padding:14px;text-align:left;vertical-align:top}
+table.req th{background:var(--beige);width:9em;font-weight:700;color:var(--pink-d)}
+.tablebox{overflow-x:auto}
+.entry{background:#fff;border:1px solid var(--line);border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.entry p{color:var(--muted)}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--beige);color:var(--ink);font-size:15px;margin-bottom:6px}
+.err{color:#b23a4c;font-size:13px;min-height:1.3em;margin-bottom:8px}
+.ok{background:var(--pink-l);border:1px solid var(--pink);border-radius:12px;padding:14px;margin-top:8px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.entry{grid-template-columns:1fr;padding:30px}
+  .cards{grid-template-columns:1fr}
+  .day{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr}
+  section{padding:46px 0}
+}
+@media (max-width:480px){.logo{font-size:14px;gap:6px}header.site .btn{padding:10px 16px;font-size:13px}.hero h1{font-size:clamp(20px,6vw,24px)}.day{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の商品・架空の口コミ。実在のブランド・商品とは関係ありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#fdf0f1" stroke="#e8929f" stroke-width="1.5"/><path d="M15 7c4 4 7 7 7 11a7 7 0 1 1-14 0c0-4 3-7 7-11z" fill="#c66477"/></svg>ツヤベール美容液（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#worry">お悩み</a></li><li><a href="#voice">口コミ</a></li><li><a href="#price">価格</a></li></ul></nav>
+  <a class="btn" href="#entry">限定価格で試す</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">毛穴・くすみ美容液（架空の商品）</span>
+      <h1>「鏡を見るたび、<br><mark>毛穴</mark>が気になっていませんか？」</h1>
+      <p>ファンデーションを重ねるほど毛穴が目立つ、朝は整っていたメイクが夕方には崩れる──その繰り返しに疲れた30〜40代の肌に向けて作った、ひと塗りで仕上がりが変わる美容液です。</p>
+      <a class="btn" href="#entry">初回63%OFFで試す</a>
+      <div class="chips"><span>30日間返金保証（架空）</span><span>無香料・無着色</span><span>累計販売12万本（架空）</span></div>
+    </div>
+    <svg viewBox="0 0 440 320" aria-hidden="true">
+      <circle cx="220" cy="160" r="140" fill="#fdf0f1"/>
+      <g transform="translate(150 70)">
+        <rect x="10" y="30" width="80" height="150" rx="16" fill="#ffffff" stroke="#e8929f" stroke-width="3"/>
+        <rect x="24" y="10" width="52" height="30" rx="8" fill="#c66477"/>
+        <circle cx="50" cy="100" r="22" fill="#f7cdd2"/>
+        <rect x="24" y="140" width="52" height="8" rx="4" fill="#f3dde0"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="worry">
+    <div class="eyebrow">INSIGHT</div>
+    <h2>こんなお悩み、ありませんか？</h2>
+    <p class="lead">20〜40代女性300名への調査（架空の数値）をもとに、肌悩みの背景にある「本当の不安」を整理しました。</p>
+    <div class="cards">
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdf0f1"/><circle cx="16" cy="18" r="2" fill="#c66477"/><circle cx="22" cy="24" r="2" fill="#c66477"/><circle cx="28" cy="16" r="2" fill="#c66477"/></svg><h3>毛穴の開き・黒ずみ</h3><p>メイクで隠しても、皮脂が出る時間帯になると目立ってしまう毛穴。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdf0f1"/><path d="M14 22h16" stroke="#c66477" stroke-width="2.6" stroke-linecap="round"/></svg><h3>くすみ・透明感不足</h3><p>肌色がワントーン暗く見え、写真に写ると顔色が悪く感じてしまう。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdf0f1"/><path d="M22 12v20M14 22h16" stroke="#c66477" stroke-width="2.6" stroke-linecap="round"/></svg><h3>メイク崩れの早さ</h3><p>朝のメイクが昼過ぎには毛穴落ち。午後の予定で気になってしまう。</p></div>
+    </div>
+  </section>
+
+  <section id="concept" style="background:var(--beige);border-radius:28px">
+    <div class="wrap" style="padding:0 20px">
+    <div class="eyebrow">CONCEPT</div>
+    <h2>「隠す」から「整える」へ。使用イメージ（架空のモニター例）</h2>
+    <div class="day">
+      <div><time>Day 1</time><p>肌にのせた瞬間からうるおいを感じる処方。メイク前の下地としても。</p></div>
+      <div><time>Day 7</time><p>キメが整い、ファンデーションのノリが変わってきたと感じる方が多い期間。</p></div>
+      <div><time>Day 14</time><p>皮脂によるメイク崩れが落ち着き、昼過ぎの化粧直しの回数が減る。</p></div>
+      <div><time>Day 30</time><p>毛穴・くすみの印象変化を実感しやすいタイミング（個人差があります）。</p></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="voice">
+    <div class="eyebrow">VOICE</div>
+    <h2>ご利用者さまの声（架空のモニター）</h2>
+    <div class="people">
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fdf0f1"/><circle cx="29" cy="24" r="10" fill="#f0a9b2"/><path d="M14 46c3-12 27-12 30 0" fill="#f0a9b2"/></svg>
+        <div><h3>M.K さん（架空）</h3><span class="stars">★★★★★</span><small>38歳・会社員</small><p>毛穴を隠すことに疲れていましたが、夕方のメイク崩れが減って化粧直しが楽になりました。</p></div>
+      </div>
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fdf0f1"/><circle cx="29" cy="24" r="10" fill="#e8929f"/><path d="M14 46c3-12 27-12 30 0" fill="#e8929f"/></svg>
+        <div><h3>A.T さん（架空）</h3><span class="stars">★★★★☆</span><small>45歳・パート</small><p>香りが強くないので毎日続けやすく、1本使い切る頃に肌のトーンが明るく感じました。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="eyebrow">PRICE</div>
+    <h2>商品概要（見本・架空の内容）</h2>
+    <div class="tablebox">
+    <table class="req">
+      <tr><th>商品名</th><td>ツヤベール美容液（架空の商品）30ml</td></tr>
+      <tr><th>通常価格</th><td>7,980円（税込・見本の架空の金額）</td></tr>
+      <tr><th>初回限定価格</th><td>2,980円（63%OFF・初回のみ）</td></tr>
+      <tr><th>お届けサイクル</th><td>2回目以降は4週ごと・休止・解約いつでも可</td></tr>
+      <tr><th>保証</th><td>お届けから30日間の返金保証（架空）</td></tr>
+      <tr><th>成分の特徴</th><td>保湿成分配合・無香料・無着色・パラベンフリー（見本のため成分名は記載していません）</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section id="entry">
+    <div class="entry">
+      <div>
+        <div class="eyebrow">ENTRY</div>
+        <h2 style="margin-top:6px">お申し込みフォーム（見本）</h2>
+        <p>実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">お名前</label>
+        <input id="name" name="name" type="text" placeholder="山田 花子">
+        <div class="err" id="errName"></div>
+        <label for="t">電話番号</label>
+        <input id="t" name="tel" inputmode="tel" autocomplete="off" placeholder="090-0000-0000">
+        <div class="err" id="errTel"></div>
+        <label for="pref">お申し込みプラン</label>
+        <select id="pref" name="pref">
+          <option value="">選択してください</option>
+          <option>初回限定・定期コース</option>
+          <option>単品購入</option>
+          <option>まずは資料だけ見たい</option>
+        </select>
+        <div class="err" id="errPref"></div>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。商品名・口コミ・成分説明・数値はすべて架空であり、実在のブランド・商品とは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var tel = document.getElementById('t').value.trim();
+  var pref = document.getElementById('pref').value;
+  var errName = document.getElementById('errName');
+  var errTel = document.getElementById('errTel');
+  var errPref = document.getElementById('errPref');
+  errName.textContent = ''; errTel.textContent = ''; errPref.textContent = '';
+  if(!name){ errName.textContent = 'お名前を入力してください。'; ok = false; }
+  if(!tel || !/^[0-9\-]{10,13}$/.test(tel)){ errTel.textContent = '電話番号を正しい形式で入力してください。'; ok = false; }
+  if(!pref){ errPref.textContent = 'プランを選択してください。'; ok = false; }
+  document.getElementById('ok').hidden = !ok;
+});
+</script>
+</body>
+</html>
