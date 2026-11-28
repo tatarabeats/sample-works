@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>いろどりBOX（架空）冷凍宅配ごはんLP・SNS広告バナー｜自主制作の見本</title>
+<meta name="description" content="冷凍宅配ごはんサービスのLPとSNS広告バナーの自主制作見本です。店舗名・メニュー・数値はすべて架空です。">
+<link rel="stylesheet" href="../../assets/sample.css">
+<style>
+:root{--ink:#3b3330;--muted:#857b74;--main:#ef8354;--main-d:#d9631f;--leaf:#5f9165;--cream:#fff7ee;--line:#f0e2d4;--bg:#fffcf8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px;white-space:nowrap;color:var(--main-d)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--main-d)}
+.btn{display:inline-block;white-space:nowrap;background:var(--main-d);color:#fff;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px;border:0;cursor:pointer;font-size:15px}
+.btn.outline{background:#fff;color:var(--main-d);border:1.5px solid var(--main-d)}
+.hero{background:linear-gradient(135deg,var(--cream) 0%,#fdeee0 100%);border-radius:28px;padding:50px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;margin-bottom:22px}
+.hero .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;color:var(--main-d)}
+.hero h1{font-size:clamp(24px,3.6vw,38px);line-height:1.55;margin:16px 0;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1 mark{background:linear-gradient(transparent 62%,#ffd9b0 62%);color:inherit}
+.hero p{color:var(--muted);margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--main-d);font-weight:700}
+section{padding:60px 0}
+.eyebrow{color:var(--main-d);font-weight:800;font-size:12px;letter-spacing:.25em}
+h2{font-size:clamp(22px,3vw,30px);margin:6px 0 28px;line-height:1.5}
+.lead{color:var(--muted);margin:-10px 0 28px;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:44px;height:44px;margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.menu div{background:#fff;border-radius:16px;padding:16px;border:1px solid var(--line);text-align:center}
+.menu .plate{width:100%;height:84px;border-radius:12px;margin-bottom:10px}
+.menu p{margin:0;font-size:13px;font-weight:700}
+.menu small{color:var(--muted);font-size:12px}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.person{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff;display:flex;gap:16px}
+.person .face{width:58px;height:58px;flex-shrink:0}
+.person h3{margin:0 0 2px;font-size:16px}
+.person .stars{color:var(--main-d);font-size:14px;letter-spacing:1px}
+.person small{color:var(--main-d);font-weight:700;display:block;margin:2px 0 8px}
+.person p{font-size:14px;margin:0;color:var(--muted)}
+.banners{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.banner{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.banner svg{display:block;width:100%;height:auto}
+.banner span{display:block;padding:10px 14px;font-size:12px;color:var(--muted)}
+table.req{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+table.req th,table.req td{border:1px solid var(--line);padding:14px;text-align:left;vertical-align:top}
+table.req th{background:var(--cream);width:9em;font-weight:700;color:var(--main-d)}
+.tablebox{overflow-x:auto}
+.entry{background:#fff;border:1px solid var(--line);border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.entry p{color:var(--muted)}
+form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form input,form select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--cream);color:var(--ink);font-size:15px;margin-bottom:6px}
+.err{color:#b23a4c;font-size:13px;min-height:1.3em;margin-bottom:8px}
+.ok{background:#fdeee0;border:1px solid var(--main);border-radius:12px;padding:14px;margin-top:8px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero,.entry{grid-template-columns:1fr;padding:30px}
+  .cards{grid-template-columns:1fr}
+  .menu{grid-template-columns:1fr 1fr}
+  .people,.banners{grid-template-columns:1fr}
+  section{padding:46px 0}
+}
+@media (max-width:480px){.logo{font-size:14px;gap:6px}header.site .btn{padding:10px 16px;font-size:13px}.hero h1{font-size:clamp(20px,6vw,24px)}.menu{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample-ribbon">自主制作の見本です（架空の店舗・架空のメニュー・数値。実在のサービスとは関係ありません）<a href="../../">見本の一覧</a></div>
+<div class="wrap">
+<header class="site">
+  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#fdeee0" stroke="#ef8354" stroke-width="1.5"/><path d="M8 18c2-6 6-9 7-9s5 3 7 9c-1 3-4 4-7 4s-6-1-7-4z" fill="#ef8354"/><circle cx="12" cy="15" r="1.6" fill="#5f9165"/><circle cx="18" cy="13" r="1.6" fill="#d9631f"/></svg>いろどりBOX（架空）</a>
+  <nav aria-label="ページ内"><ul><li><a href="#menu">メニュー</a></li><li><a href="#voice">お客様の声</a></li><li><a href="#banner">広告バナー</a></li><li><a href="#price">価格</a></li></ul></nav>
+  <a class="btn" href="#entry">初回セットを見る</a>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <span class="pill">20〜30代の一人暮らし向け 冷凍宅配ごはん（架空の商品）</span>
+      <h1>仕事で疲れた夜も、<br><mark>彩りとおいしさ</mark>はあきらめない。</h1>
+      <p>自炊する時間がない日でも、レンジ5分で彩り豊かな一食に。管理栄養士監修（架空）の献立を、忙しい毎日のための冷凍宅配でお届けします。</p>
+      <a class="btn" href="#entry">初回4食 2,980円で試す</a>
+      <div class="chips"><span>レンジ5分で完成</span><span>1食あたり約450kcal（架空）</span><span>累計お届け8万食（架空）</span></div>
+    </div>
+    <svg viewBox="0 0 440 320" aria-hidden="true">
+      <circle cx="220" cy="160" r="140" fill="#fdeee0"/>
+      <g transform="translate(110 70)">
+        <ellipse cx="110" cy="150" rx="100" ry="26" fill="#ffffff" stroke="#f0e2d4" stroke-width="2"/>
+        <ellipse cx="110" cy="140" rx="92" ry="22" fill="#fff"/>
+        <ellipse cx="80" cy="132" rx="26" ry="14" fill="#ef8354"/>
+        <ellipse cx="130" cy="128" rx="22" ry="12" fill="#5f9165"/>
+        <ellipse cx="150" cy="142" rx="18" ry="10" fill="#f4c04a"/>
+        <ellipse cx="95" cy="148" rx="20" ry="10" fill="#d9631f"/>
+      </g>
+    </svg>
+  </div>
+
+  <section id="worry">
+    <div class="eyebrow">INSIGHT</div>
+    <h2>こんな毎日、ありませんか？</h2>
+    <p class="lead">20〜30代の一人暮らし300名への調査（架空の数値）をもとに、食事づくりの悩みを整理しました。</p>
+    <div class="cards">
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdeee0"/><path d="M22 12v10l7 5" stroke="#d9631f" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><h3>帰宅が遅く作る時間がない</h3><p>仕事終わりに買い物・調理をする余裕がなく、外食やコンビニが続いてしまう。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdeee0"/><path d="M14 26c2-8 14-8 16 0" stroke="#d9631f" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><h3>栄養バランスが気になる</h3><p>簡単な食事に偏りがちで、野菜や栄養バランスに不安を感じている。</p></div>
+      <div class="card"><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#fdeee0"/><rect x="14" y="14" width="16" height="16" rx="3" stroke="#d9631f" stroke-width="2.6" fill="none"/></svg><h3>作り置きが続かない</h3><p>休日にまとめて作っても、平日の忙しさで食べきれず無駄にしてしまう。</p></div>
+    </div>
+  </section>
+
+  <section id="menu" style="background:var(--cream);border-radius:28px">
+    <div class="wrap" style="padding:0 20px">
+    <div class="eyebrow">MENU</div>
+    <h2>今週の彩りメニュー（見本・架空の献立）</h2>
+    <div class="menu">
+      <div><svg class="plate" viewBox="0 0 100 60"><rect width="100" height="60" rx="10" fill="#fff"/><ellipse cx="38" cy="32" rx="18" ry="10" fill="#ef8354"/><ellipse cx="65" cy="26" rx="14" ry="9" fill="#5f9165"/><ellipse cx="68" cy="42" rx="12" ry="7" fill="#f4c04a"/></svg><p>鮭と彩り野菜の塩麹焼き</p><small>約420kcal（架空）</small></div>
+      <div><svg class="plate" viewBox="0 0 100 60"><rect width="100" height="60" rx="10" fill="#fff"/><ellipse cx="40" cy="30" rx="20" ry="11" fill="#d9631f"/><ellipse cx="68" cy="34" rx="13" ry="8" fill="#5f9165"/></svg><p>鶏むね肉のトマト煮込み</p><small>約390kcal（架空）</small></div>
+      <div><svg class="plate" viewBox="0 0 100 60"><rect width="100" height="60" rx="10" fill="#fff"/><ellipse cx="42" cy="32" rx="22" ry="12" fill="#f4c04a"/><ellipse cx="68" cy="26" rx="12" ry="8" fill="#5f9165"/></svg><p>彩り野菜の豆腐ハンバーグ</p><small>約410kcal（架空）</small></div>
+      <div><svg class="plate" viewBox="0 0 100 60"><rect width="100" height="60" rx="10" fill="#fff"/><ellipse cx="38" cy="30" rx="18" ry="10" fill="#5f9165"/><ellipse cx="64" cy="34" rx="16" ry="9" fill="#ef8354"/></svg><p>野菜たっぷりキーマカレー</p><small>約460kcal（架空）</small></div>
+    </div>
+    </div>
+  </section>
+
+  <section id="voice">
+    <div class="eyebrow">VOICE</div>
+    <h2>ご利用者さまの声（架空のモニター）</h2>
+    <div class="people">
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fdeee0"/><circle cx="29" cy="24" r="10" fill="#f0a97a"/><path d="M14 46c3-12 27-12 30 0" fill="#f0a97a"/></svg>
+        <div><h3>R.S さん（架空）</h3><span class="stars">★★★★★</span><small>28歳・会社員・一人暮らし</small><p>帰宅後にレンジで5分、見た目もきれいな一食が食べられるので、外食が自然と減りました。</p></div>
+      </div>
+      <div class="person">
+        <svg class="face" viewBox="0 0 58 58"><circle cx="29" cy="29" r="28" fill="#fdeee0"/><circle cx="29" cy="24" r="10" fill="#ef8354"/><path d="M14 46c3-12 27-12 30 0" fill="#ef8354"/></svg>
+        <div><h3>Y.N さん（架空）</h3><span class="stars">★★★★☆</span><small>33歳・会社員</small><p>冷凍庫に常備しておけるので、残業で遅くなった日の「何も作れない」が解決しました。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="banner">
+    <div class="eyebrow">AD BANNER</div>
+    <h2>SNS広告バナー（見本・正方形フォーマット）</h2>
+    <p class="lead">Instagram・Facebook広告向けの正方形バナー案です。訴求ポイントを変えた3パターン。</p>
+    <div class="banners">
+      <div class="banner">
+        <svg viewBox="0 0 400 400"><rect width="400" height="400" fill="#fdeee0"/><circle cx="200" cy="150" r="90" fill="#fff"/><ellipse cx="170" cy="150" rx="40" ry="24" fill="#ef8354"/><ellipse cx="225" cy="138" rx="30" ry="20" fill="#5f9165"/><ellipse cx="230" cy="170" rx="26" ry="16" fill="#f4c04a"/><rect x="0" y="280" width="400" height="120" fill="#d9631f"/><text x="200" y="320" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="700" fill="#fff">レンジ5分で彩りごはん</text><text x="200" y="355" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#ffe8d2">初回4食 2,980円（見本）</text></svg>
+        <span>訴求A: 時短</span>
+      </div>
+      <div class="banner">
+        <svg viewBox="0 0 400 400"><rect width="400" height="400" fill="#fff7ee"/><rect x="30" y="30" width="340" height="340" rx="20" fill="none" stroke="#ef8354" stroke-width="4"/><ellipse cx="200" cy="170" rx="100" ry="60" fill="#fff"/><ellipse cx="170" cy="170" rx="34" ry="20" fill="#5f9165"/><ellipse cx="225" cy="160" rx="28" ry="18" fill="#d9631f"/><text x="200" y="280" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#3b3330">栄養バランスも、おいしさも</text><text x="200" y="312" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#857b74">管理栄養士監修の冷凍ごはん（見本）</text><rect x="130" y="335" width="140" height="40" rx="20" fill="#d9631f"/><text x="200" y="361" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#fff" font-weight="700">初回限定で試す</text></svg>
+        <span>訴求B: 栄養</span>
+      </div>
+      <div class="banner">
+        <svg viewBox="0 0 400 400"><rect width="400" height="400" fill="#5f9165"/><circle cx="200" cy="160" r="95" fill="#fff"/><ellipse cx="175" cy="160" rx="36" ry="22" fill="#ef8354"/><ellipse cx="228" cy="150" rx="26" ry="18" fill="#f4c04a"/><text x="200" y="290" text-anchor="middle" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">今夜のごはん、もう悩まない</text><text x="200" y="322" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#e4f0e2">一人暮らしの冷凍宅配（見本）</text></svg>
+        <span>訴求C: 安心感</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="eyebrow">PRICE</div>
+    <h2>サービス概要（見本・架空の内容）</h2>
+    <div class="tablebox">
+    <table class="req">
+      <tr><th>サービス名</th><td>いろどりBOX（架空の冷凍宅配ごはん）</td></tr>
+      <tr><th>内容量</th><td>1箱4食 または8食（架空）</td></tr>
+      <tr><th>初回限定価格</th><td>4食 2,980円（通常4,680円・見本の架空の金額）</td></tr>
+      <tr><th>お届けサイクル</th><td>2週に1回・スキップ・解約いつでも可</td></tr>
+      <tr><th>調理方法</th><td>電子レンジ加熱のみ（約5分・個包装）</td></tr>
+      <tr><th>保存方法</th><td>冷凍庫で保管・賞味期限は製造から6か月（架空）</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section id="entry">
+    <div class="entry">
+      <div>
+        <div class="eyebrow">ENTRY</div>
+        <h2 style="margin-top:6px">初回セットのお申し込み（見本）</h2>
+        <p>実際の送信は行われません。入力内容の確認表示のみご覧いただけます。</p>
+      </div>
+      <form id="entryForm" novalidate>
+        <label for="name">お名前</label>
+        <input id="name" name="name" type="text" placeholder="山田 花子">
+        <div class="err" id="errName"></div>
+        <label for="t">電話番号</label>
+        <input id="t" name="tel" inputmode="tel" autocomplete="off" placeholder="090-0000-0000">
+        <div class="err" id="errTel"></div>
+        <label for="pref">お申し込みプラン</label>
+        <select id="pref" name="pref">
+          <option value="">選択してください</option>
+          <option>初回限定 4食セット</option>
+          <option>通常 8食セット</option>
+          <option>まずは資料だけ見たい</option>
+        </select>
+        <div class="err" id="errPref"></div>
+        <button class="btn" type="submit" style="width:100%;margin-top:6px">見本フォームを送信</button>
+        <div class="ok" id="ok" hidden>送信内容を確認しました（見本のため実際には送信されません）。</div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>※このページは自主制作の見本です。サービス名・メニュー・口コミ・数値はすべて架空であり、実在のサービスとは関係ありません。</footer>
+</div>
+<script>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('name').value.trim();
+  var tel = document.getElementById('t').value.trim();
+  var pref = document.getElementById('pref').value;
+  var errName = document.getElementById('errName');
+  var errTel = document.getElementById('errTel');
+  var errPref = document.getElementById('errPref');
+  errName.textContent = ''; errTel.textContent = ''; errPref.textContent = '';
+  if(!name){ errName.textContent = 'お名前を入力してください。'; ok = false; }
+  if(!tel || !/^[0-9\-]{10,13}$/.test(tel)){ errTel.textContent = '電話番号を正しい形式で入力してください。'; ok = false; }
+  if(!pref){ errPref.textContent = 'プランを選択してください。'; ok = false; }
+  document.getElementById('ok').hidden = !ok;
+});
+</script>
+</body>
+</html>
